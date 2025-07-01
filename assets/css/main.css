@@ -1,0 +1,300 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: var(--white-color);
+  width: 100%;
+  height: 128px;
+}
+
+/* Header Banner */
+.header__banner {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--flash-sale-color);
+}
+
+/* Header Search */
+.header-search {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+  align-items: center;
+  justify-content: center;
+  /* Sửa lại nha */
+}
+.search-btn {
+  background-color: var(--primary-color);
+  border: var(--primary-color);
+  border-radius: 4px;
+  width: 70px;
+  height: 30px;
+  padding-top: 5px;
+}
+.search-icon {
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.logo-img {
+  width: 216px;
+  height: 40px;
+}
+.header-icons a {
+  text-decoration: none;
+}
+.language-selector {
+  display: none;
+}
+/*Grid-main*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 7.5% 85% 7.5%;
+}
+
+.left-sidebar,
+.right-sidebar,
+.main-content {
+  background-color: #f0f0f0;
+  min-height: 200px;
+  padding-top: 15px;
+}
+/* Banner Top */
+.banner-top {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: stretch;
+  list-style-type: none;
+}
+
+.banner-left {
+  flex: 2;
+}
+
+.banner-left img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.banner-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.banner-right-top,
+.banner-right-bottom {
+  flex: 1;
+}
+
+.banner-right-top img,
+.banner-right-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Banner Bottom */
+.banner-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  margin: 10px 0px;
+}
+.banner-bottom-item {
+  flex: 1;
+}
+
+/*Icon-menu-list*/
+.icon-menu {
+  background-color: var(--white-color);
+  border-radius: 8px;
+  padding: 10px;
+}
+.icon-menu-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  margin: 10px 0px;
+}
+.icon-menu-item {
+  flex: 1;
+}
+.icon-menu-item-link {
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.icon-menu-img {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 8px;
+}
+/*Flash-sale*/
+.flash-sale {
+  width: 100vw;
+  background: linear-gradient(to bottom, #ff6c6b, #E94850);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 0;
+  margin: 30px 0;
+}
+.flash-sale-inner {
+  width: 85%;
+  margin: 0 auto;
+}
+.banner-flash-sale {
+  display: flex;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: var(--white-color);
+  border-radius: 8px;
+}
+.ending-flash-sale{
+  margin-left: 20px;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  border: 20px;
+}
+.timer-ending-flash-sale{
+  padding: 8px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-weight: bold;
+  border-radius: 8px;
+  margin: 2px;
+}
+.see-all{
+  margin-left: auto; 
+  text-decoration: none;
+  color: #1478FC;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: -3px;
+  margin-right: 2px;
+}
+/*Flash-sale-list*/
+.flash-sale-list{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.flash-sale-item{
+  display: flex;
+  background-color: var(--white-color);
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+.flash-sale-item-link{
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.flash-sale-item-img{
+  width: 100%;
+  padding-bottom: 5px;
+}
+.flash-sale-item-bottom {
+  display: flex;
+  align-items: flex-end;
+  padding: 5px 0;
+  min-height: 35px;
+}
+
+/* Trái */
+.grid-flash-sale-item-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 13px;
+}
+
+.price-flash-sale-item {
+  font-weight: bold;
+  color:#C92127;
+  font-size: 17px;
+}
+
+.original-price-flash-sale-item {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 16px;
+}
+.sold-out-flash-sale-item{
+  background-color: #C92127;
+  color: var(--white-color);
+  padding: 2px 3px;
+  border-radius: 16px;
+  font-size: 12px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+/* Phải */
+.grid-flash-sale-item-right {
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #C92127;
+  padding: 5px 6px;
+  border-radius: 4px;
+  margin-top: -15px;
+  margin-left: 10px;
+}
+.original-priceprice-flash-sale-item{
+  text-decoration: line-through;
+  color: #979797;
+}
+.discount-flash-sale-item{
+  padding-top: -20px;
+}
+.flash-sale-item-name{
+  min-height: 33px;
+}
+/*category*/
+.category{
+  display: none;
+}
+/*Ranking top manga*/
+.ranking-top-manga{
+  display: none;
+}
+/*Logo brand*/
+.logo-brand{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white-color);
+  padding: 10px 5px;
+}
+/*Rank sold out list*/
+.rank-soldout-list{
+  display: none;
+}
+/*Footer*/
+.footer {
+  display: none;
+}
