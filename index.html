@@ -1,521 +1,995 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mua sắm trực tuyến tại Fahasa, sàn thương mại điện tử bán sách hàng đầu Việt Nam.">
-    <meta name="keywords" content="Fahasa sàn thương mại điện tử bán sách">
-    <meta name="author" content="Quinn">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/img/logo.png">
-    <title>Fahasa - Nhà sách trực tuyến</title>
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/base.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mua sắm trực tuyến tại Fahasa, sàn thương mại điện tử bán sách hàng đầu Việt Nam.">
+  <meta name="keywords" content="Fahasa sàn thương mại điện tử bán sách">
+  <meta name="author" content="Quinn">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/img/logo.png">
+  <title>Fahasa - Nhà sách trực tuyến</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/base.css">
 
 </head>
-<body>
-    <header class="header">
-        <div class="header__banner">
-            <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-05-2025/Header_1263x60-15.png" alt="">           
-        </div>
-        <div class="header-search">
-            <div class="header__logo">
-                <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png" class="logo-img" alt="logo">
-            </div>
-            <div class="category-dropdown">
-                <img src="assets/img/category.png" alt="category">
-            </div>
-            <form action="search-header">
-                <input type="text" placeholder="Bút chấm đọc - Học tiếng Anh">
-                <button class="search-btn" type="submit">
-                    <img src="assets/img/search.png" class="search-icon" alt="Tìm kiếm">
-                </button>
-            </form>
-            <div class="header-icons">
-                <a href="#" class="icon-link">
-                    <img src="assets/img/notification.png" alt="Thông Báo" class="icon-img"> Thông Báo
-                </a>
-                <a href="#" class="icon-link">
-                    <img src="assets/img/shopping-cart.png" alt="Giỏ Hàng" class="icon-img"> Giỏ Hàng
-                </a>
-                <a href="#" class="icon-link">
-                    <img src="assets/img/user.png" alt="Tài khoản" class="icon-img"> Tài khoản
-                </a>
-            </div>
-            <div class="language-selector">
-                <button class="lang-toggle" onclick="toggleDropdown()">
-                    <img src="assets/img/vietnam.png" alt="VN" class="flag-icon">
-                    <span class="arrow">▼</span>
-                </button>
 
-                <div class="lang-dropdown" id="langDropdown">
-                    <a href="?lang=vn" class="lang-option">
-                    <img src="assets/img/vietnam.png" alt="VN" class="flag-icon"> VN
-                    </a>
-                    <a href="?lang=en" class="lang-option">
-                    <img src="assets/img/english.png" alt="EN" class="flag-icon"> EN
-                    </a>
-                </div>
-            </div>
-        </div>            
-    </header>
-    <div class="app__main">
-        <div class="grid-container">
-            <div class="left-sidebar"> </div>
-            <div class="main-content">
-                <div class="banner-top">
-                    <div class="banner-left">
-                        <img src="https://cdn1.fahasa.com/media/magentothem/banner7/TueTriT6_840x320_1.jpg" alt="image banner left">
-                    </div>
-                    <div class="banner-right">
-                        <div class="banner-right-top">
-                        <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/homecreditT6_392x156.png" alt="image banner right top">
-                        </div>
-                        <div class="banner-right-bottom">
-                        <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/ShopeeT6.png" alt="image banner right bottom">
-                        </div>
-                    </div>
-                </div>
-                <div class="banner-bottom">
-                    <div class="banner-bottom-item">
-                        <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/BackToSchool_TrangTong_SmallBanner_310x210.png" alt="image banner item 1">
-                    </div>
-                    <div class="banner-bottom-item">
-                        <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/CTMangaWeek_310x210.png" alt="image banner item 2">
-                    </div>
-                    <div class="banner-bottom-item">
-                        <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/Deli_KC_310x210.png" alt="image banner item 3">
-                    </div>
-                    <div class="banner-bottom-item">
-                        <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/NgoaiVan_T6_LDP_small4.png" alt="image banner item 4">
-                    </div>
-                </div>
-                <div class="icon-menu">
-                    <ul class="icon-menu-list">
-                        <li class="icon-menu-item">
-                            <a href="#" class="icon-menu-item-link">
-                                <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-07-2025/icon_6.7-01.png" alt="Sinh Nhật 10 Năm" class="icon-menu-img">Sinh Nhật 10 Năm
-                            </a>
-                        </li>
-                        <li class="icon-menu-item">
-                            <a href="#" class="icon-menu-item-link">
-                                <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-07-2025/icon_GameSN10Nam.gif" alt="Điểm danh mỗi ngày" class="icon-menu-img">Điểm danh mỗi ngày
-                            </a>
-                        </li>
-                        <li class="icon-menu-item">
-                            <a href="#" class="icon-menu-item-link">
-                                <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/Icon_TanViet_120x120.png" alt="Tân Việt" class="icon-menu-img">Tân Việt
-                            </a>
-                        </li>
-                        <li class="icon-menu-item">
-                            <a href="#" class="icon-menu-item-link">
-                                <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-07-2025/Icon_SGBook_120x120.png" alt="SaiGonBooks" class="icon-menu-img">SaiGonBooks
-                            </a>
-                        </li>
-                        <li class="icon-menu-item">
-                            <a href="#" class="icon-menu-item-link">
-                                <img src="https://cdn1.fahasa.com/media/wysiwyg/icon-menu/Icon_MaGiamGia_8px_1.png" alt="Mã Giảm Giá" class="icon-menu-img">Mã Giảm Giá
-                            </a>
-                        </li>
-                        <li class="icon-menu-item">
-                            <a href="#" class="icon-menu-item-link">
-                                <img src="https://cdn1.fahasa.com/media/wysiwyg/icon-menu/Icon_SanPhamMoi_8px_1.png" alt="Sản Phẩm Mới" class="icon-menu-img">Sản Phẩm Mới
-                            </a>
-                        </li>
-                        <li class="icon-menu-item">
-                            <a href="#" class="icon-menu-item-link">
-                                <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/Icon_SGK_120x120.png" alt="SGK 2025" class="icon-menu-img">SGK 2025
-                            </a>
-                        </li>
-                        <li class="icon-menu-item">
-                            <a href="#" class="icon-menu-item-link">
-                                <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-01-2024/ChoDoCu.png" alt="Phiên Chợ Đồ Cũ" class="icon-menu-img">Phiên Chợ Đồ Cũ
-                            </a>
-                        </li>
-                        <li class="icon-menu-item">
-                            <a href="#" class="icon-menu-item-link">
-                                <img src="https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/ICON/Icon_DonSi_120x120.png" alt="Bán Sỉ" class="icon-menu-img">Bán Sỉ
-                            </a>
-                        </li>
-                        <li class="icon-menu-item">
-                            <a href="#" class="icon-menu-item-link">
-                                <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2024/icon_ManngaT06.png" alt="Manga" class="icon-menu-img">Manga
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="flash-sale">
-                  <div class="flash-sale-inner">
-                    <div class="banner-flash-sale">
-                      <a href="#" class="flash-sale-banner">
-                        <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/flashsale/label-flashsale.svg?q=" alt="banner-flash-sale-img" class="banner-flash-sale-img">
-                      </a>
-                      <p class="ending-flash-sale">Kết thúc trong </p>
-                      <span class="timer-ending-flash-sale">01</span>:<span class="timer-ending-flash-sale">17</span>:<span class="timer-ending-flash-sale">01</span>
-                      <a href="#" class="see-all">Xem tất cả</a><img src="assets/img/chevron.png" alt="">
-                    </div>
-                    <div class="flash-sale-hot-deals">
-                      <ul class="flash-sale-list">
-                        <li class="flash-sale-item">
-                          <a href="#" class="flash-sale-item-link">
-                                  <img src="https://cdn1.fahasa.com/media/catalog/product/4/0/40eebd4668f7f312da5486d5804cc24e.jpg" alt="Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)" class="flash-sale-item-img">
-                                  <span class="flash-sale-item-name">Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)</span>
-                                  <div class="flash-sale-item-bottom">
-                                    <div class="grid-flash-sale-item-left">
-                                      <span class="price-flash-sale-item">Giá: 45.000đ</span>
-                                      <span class="original-price-flash-sale-item">90.000</span>
-                                    </div>
-                                    <div class="grid-flash-sale-item-right">
-                                      <span class="discount-flash-sale-item">-50%</span>
-                                    </div>
-                                  </div>
-                                  <div class="sold-out-flash-sale-item">
-                                    <span>Đã bán 15</span>
-                                  </div>
-                            </a>
-                        </li>
-                        <li class="flash-sale-item">
-                          <a href="#" class="flash-sale-item-link">
-                                  <img src="https://cdn1.fahasa.com/media/catalog/product/z/6/z6553474839570_cbc862fae5de1e0201adc0beecdb8a49.jpg" alt="Ngược Dòng Yêu Thương" class="flash-sale-item-img">
-                                  <span class="flash-sale-item-name">Ngược Dòng Yêu Thương</span>
-                                  <div class="flash-sale-item-bottom">
-                                    <div class="grid-flash-sale-item-left">
-                                      <span class="price-flash-sale-item">Giá: 75.000đ</span>
-                                      <span class="original-price-flash-sale-item">118.000</span>
-                                    </div>
-                                    <div class="grid-flash-sale-item-right">
-                                      <span class="discount-flash-sale-item">-36%</span>
-                                    </div>
-                                  </div>
-                                  <div class="sold-out-flash-sale-item">
-                                    <span>Đã bán 15</span>
-                                  </div>
-                              </a>
-                        </li>
-                        <li class="flash-sale-item">
-                          <a href="#" class="flash-sale-item-link">
-                                  <img src="https://cdn1.fahasa.com/media/catalog/product/b/_/b_n-sao-c_a-b_a-tr_c-li_t-_.jpg" alt="Linh Điểu" class="flash-sale-item-img">
-                                  <span class="flash-sale-item-name">Linh Điểu</span>
-                                  <div class="flash-sale-item-bottom">
-                                    <div class="grid-flash-sale-item-left">
-                                      <span class="price-flash-sale-item">Giá: 100.500đ</span>
-                                      <span class="original-price-flash-sale-item">158.000</span>
-                                    </div>
-                                    <div class="grid-flash-sale-item-right">
-                                      <span class="discount-flash-sale-item">-36%</span>
-                                    </div>
-                                  </div>
-                                  <div class="sold-out-flash-sale-item">
-                                    <span>Đã bán 15</span>
-                                  </div>
-                              </a>
-                        </li>
-                        <li class="flash-sale-item">
-                          <a href="#" class="flash-sale-item-link">
-                                  <img src="https://cdn1.fahasa.com/media/catalog/product/b/_/b_a-1---b_ng-qua-_i-d_ng-_en.jpg" alt="Chú Bé Rắc Rối (2022)" class="flash-sale-item-img">
-                                  <span class="flash-sale-item-name">Chú Bé Rắc Rối (2022)</span>
-                                  <div class="flash-sale-item-bottom">
-                                    <div class="grid-flash-sale-item-left">
-                                      <span class="price-flash-sale-item">Giá: 71.500đ</span>
-                                      <span class="original-price-flash-sale-item">95.000</span>
-                                    </div>
-                                    <div class="grid-flash-sale-item-right">
-                                      <span class="discount-flash-sale-item">-24%</span>
-                                    </div>
-                                  </div>
-                                  <div class="sold-out-flash-sale-item">
-                                    <span>Đã bán 15</span>
-                                  </div>
-                              </a>
-                        </li>
-                        <li class="flash-sale-item">
-                          <a href="#" class="flash-sale-item-link">
-                                  <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8934974185086.jpg" alt="Mèo Chiến Binh - Vào Trong Hoang Dã (Tái Bản 2019)" class="flash-sale-item-img">
-                                  <span class="flash-sale-item-name">Mèo Chiến Binh - Vào Trong Hoang Dã (Tái Bản 2019)</span>
-                                  <div class="flash-sale-item-bottom">
-                                    <div class="grid-flash-sale-item-left">
-                                      <span class="price-flash-sale-item">Giá: 61.500đ</span>
-                                      <span class="original-price-flash-sale-item">88.000</span>
-                                    </div>
-                                    <div class="grid-flash-sale-item-right">
-                                      <span class="discount-flash-sale-item">-30%</span>
-                                    </div>
-                                  </div>
-                                  <div class="sold-out-flash-sale-item">
-                                    <span>Đã bán 15</span>
-                                  </div>
-                              </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="category">
-                  <div class="category-top">
-                    <img src="assets/img/category.png" class="icon-category" alt="Danh mục sản phẩm">
-                    <span class="category-top-name">Danh mục sản phẩm</span>
-                  </div>
-                  <div class="category-bottom">
-                    <ul class="category-list">
-                      <li class="category-item">
-                        <a href="#" class="category-item-link">
-                          <img src="https://cdn1.fahasa.com/media/wysiwyg/HUYEN-1/4902505504877-removebg-preview.png" alt="Bút Cao Cấp Pilot" class="category-item-img">
-                          <span class="category-item-name">Bút Cao Cấp Pilot</span>
-                        </a>
-                      </li>
-                      <li class="category-item">
-                        <a href="#" class="category-item-link">
-                          <img src="https://cdn1.fahasa.com/media/wysiwyg/HUYEN-1/do-choi-tri-tue-gridlock-88-thu-thach-spin-games-6070059_8-removebg-preview.png" alt="Đồ Chơi Trí Tuệ" class="category-item-img">
-                          <span class="category-item-name">Đồ Chơi Trí Tuệ</span>
-                        </a>
-                      </li>
-                      <li class="category-item">
-                        <a href="#" class="category-item-link">
-                          <img src="https://cdn1.fahasa.com/media/wysiwyg/HUYEN-1/6902957275668-2-removebg-preview.png" alt="Thiết Bị Số" class="category-item-img">
-                          <span class="category-item-name">Thiết Bị Số</span>
-                        </a>
-                      </li>
-                      <li class="category-item">
-                        <a href="#" class="category-item-link">
-                          <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/SGK-Lop3.jpg" alt="SGK 2025" class="category-item-img">
-                          <span class="category-item-name">SGK 2025</span>
-                        </a>
-                      </li>
-                      <li class="category-item">
-                        <a href="#" class="category-item-link">
-                          <img src="https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/Danh-muc-san-pham/2502/8935244874389.jpg" alt="Lịch Sử Việt Nam" class="category-item-img">
-                          <span class="category-item-name">Lịch Sử Việt Nam</span>
-                        </a>
-                      </li>
-                      <li class="category-item">
-                        <a href="#" class="category-item-link">
-                          <img src="https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/Danh-muc-tu-sach/8934974182375.jpg" alt="Văn Học" class="category-item-img">
-                          <span class="category-item-name">Văn Học</span>
-                        </a>
-                      </li>
-                      <li class="category-item">
-                        <a href="#" class="category-item-link">
-                          <img src="https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/Danh-muc-san-pham/240715/atomichabit100x100.jpg" alt="Tâm Lý Kỹ Năng" class="category-item-img">
-                          <span class="category-item-name">Tâm Lý Kỹ Năng</span>
-                        </a>
-                      </li>
-                      <li class="category-item">
-                        <a href="#" class="category-item-link">
-                          <img src="https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/ngoai-van-t1-24(1).jpg" alt="Ngoại Văn" class="category-item-img">
-                          <span class="category-item-name">Ngoại Văn</span>
-                        </a>
-                      </li>
-                      <li class="category-item">
-                        <a href="#" class="category-item-link">
-                          <img src="https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/Danh-muc-san-pham/bup-sen-xanh-100x100.png" alt="Thiếu Nhi" class="category-item-img">
-                          <span class="category-item-name">Thiếu Nhi</span>
-                        </a>
-                      </li>
-                      <li class="category-item">
-                        <a href="#" class="category-item-link">
-                          <img src="https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/Danh-muc-san-pham/240715/hsk100x100.jpg" alt="Sách Học Ngoại Ngữ" class="category-item-img">
-                          <span class="category-item-name">Sách Học Ngoại Ngữ</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="ranking-top-manga">
-                  <div class="ranking-managa-header">
-                    <img src="https://cdn1.fahasa.com/media/wysiwyg/background_top_order_manga/Icon_TOP.svg?q=11172" alt="Bảng xếp hạng thợ săn Manga" class="ranking-manga-header-img">
-                    <span class="ranking-manga-header-name">Bảng xếp hạng thợ săn Manga</span>
-                  </div>
-                  <div class="ranking-manga-main">
-                    <p class="ranking-manga-name">Bảng xếp hạng</p>
-                    <ul class="ranking-manga-list">
-                      <li class="ranking-manga-items">
-                        <div class="rank">1</div>
-                        <div class="avatar">
-                          <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/icon_top1.png" alt="avatar"> 
-                        </div>
-                        <div class="user-info">
-                          <div class="name">Nguyễn Dương Lập</div>
-                          <div class="id">*****71519</div>
-                        </div>
-                        <div class="points">
-                          <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/frame_total_top1.svg" alt="coin"> 
-                          6.320.900
-                        </div>
-                      </li>
-                      <li class="ranking-manga-items">
-                        <div class="rank">2</div>
-                        <div class="avatar">
-                          <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/icon_top2.png" alt="avatar"> 
-                        </div>
-                        <div class="user-info">
-                          <div class="name">Nguyễn Hữu Thành</div>
-                          <div class="id">*****12345</div>
-                        </div>
-                        <div class="points">
-                          <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/frame_total_top2.svg" alt="coin"> 
-                          6.230.250
-                        </div>
-                      </li>
-                      <li class="ranking-manga-items">
-                        <div class="rank">3</div>
-                        <div class="avatar">
-                          <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/icon_top3.png" alt="avatar"> 
-                        </div>
-                        <div class="user-info">
-                          <div class="name">Trần Văn An</div>
-                          <div class="id">*****67890</div>
-                        </div>
-                        <div class="points">
-                          <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/frame_total_top3.svg" alt="coin"> 
-                          5.980.100
-                        </div>
-                      </li>
-                      <li class="ranking-manga-items">
-                        <div class="rank">4</div>
-                        <div class="avatar">
-                          <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/icon_normal.png" alt="avatar"> 
-                        </div>
-                        <div class="user-info">
-                          <div class="name">Lê Thị Mai</div>
-                          <div class="id">*****54321</div>
-                        </div>
-                        <div class="points">
-                          <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/frame_total_normal.svg" alt="coin"> 
-                          5.750.800
-                        </div>
-                      </li>
-                      <li class="ranking-manga-items">
-                        <div class="rank">5</div>
-                        <div class="avatar">
-                          <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/icon_normal.png" alt="avatar"> 
-                        </div>
-                        <div class="user-info">
-                          <div class="name">Phạm Văn Bình</div>
-                          <div class="id">*****98765</div>
-                        </div>
-                        <div class="points">
-                          <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/frame_total_normal.svg" alt="coin"> 
-                          5.500.450
-                        </div>
-                      </li>
-                      <li class="ranking-manga-items">
-                        <div class="rank">6</div>
-                        <div class="avatar">
-                          <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/icon_normal.png" alt="avatar"> 
-                        </div>
-                        <div class="user-info">
-                          <div class="name">Nguyễn Thị Hương</div>
-                          <div class="id">*****24680</div>
-                        </div>
-                        <div class="points">
-                          <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/frame_total_normal.svg" alt="coin"> 
-                          5.250.300
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="logo-brand">
-                  <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_DinhTi_115x115.png" alt="Đinh Tị Books" class="logo-brand-item">
-                  <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_HGBook_115x115.png" alt="HG Books" class="logo-brand-item">
-                  <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_NhaNam_115x115.png" alt="Nhã Nam Books" class="logo-brand-item">
-                  <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_patech_1_115x115.png" alt="SBoooks" class="logo-brand-item">
-                  <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_BinhRTay_Bitex_115x115.png" alt="Bitex" class="logo-brand-item">
-                  <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_Plus_115x115.png" alt="Plus" class="logo-brand-item">
-                  <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_ThienLong_115x115.png" alt="Thiên Long" class="logo-brand-item">
-                  <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_Deli_115x115.png" alt="Deli" class="logo-brand-item">
-                </div>
-                <div class="rank-soldout-week">
-                  <div class="rank-soldout-week-header">
-                    <h3>Top Sold Out This Week</h3>
-                  </div>
-                  <div class="rank-soldout-menu">
-                    <h3 class="rank-soldout-menu-name">Văn học</h3>
-                    <h3 class="rank-soldout-menu-name">Kinh Tế</h3>
-                    <h3 class="rank-soldout-menu-name">Tâm lý - Kỹ năng sống</h3>
-                    <h3 class="rank-soldout-menu-name">Thiếu nhi</h3>
-                    <h3 class="rank-soldout-menu-name">Sách học ngoại ngữ</h3>
-                    <h3 class="rank-soldout-menu-name">Foreign books</h3>
-                    <h3 class="rank-soldout-menu-name">Thể loại khác</h3>
-                  </div>
-                  <div class="rank-soldout-list">
-                    <ul class="rank-soldout-list-left">
-                      <li class="rank-soldout-item">
-                        <div class="rank">01 <img src="https://www.fahasa.com/bong-sen-vang-an-ban-moi.html?fhs_campaign=bxh-fahasa" name="rank-soldout-item" alt=""></div>
-                        <div class="soldout-item-info">
-                          <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8932000134749_1.jpg" alt="Nếu Biết Trăm Năm Là Hữu Hạn - Ấn Bản Kỉ Niệm 10 Năm Xuất Bản (Tái Bản 2024)" class="soldout-item-img">
-                          <span class="soldout-item-name">Nếu Biết Trăm Năm Là Hữu Hạn - Ấn Bản Kỉ Niệm 10 Năm Xuất Bản (Tái Bản 2024)</span>
-                          <span class="soldout-item-auth">Phạm Lữ Ân</span>
-                          <span class="soldout-item-point">1683 điểm</span>
-                        </div>
-                      </li>
-                      <li class="rank-soldout-item">
-                        <div class="rank">2</div>
-                        <div class="soldout-item-info">
-                          <img src="https://cdn1.fahasa.com/media/catalog/product/4/0/40eebd4668f7f312da5486d5804cc24e.jpg" alt="Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)" class="soldout-item-img">
-                          <span class="soldout-item-name">Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)</span>
-                          <span class="soldout-item-auth">Phạm Lữ Ân</span>
-                          <span class="soldout-item-point">1683 điểm</span>
-                        </div>
-                      </li>
-                      <li class="rank-soldout-item">
-                        <div class="rank">3</div>
-                        <div class="soldout-item-info">
-                          <img src="https://cdn1.fahasa.com/media/catalog/product/4/0/40eebd4668f7f312da5486d5804cc24e.jpg" alt="Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)" class="soldout-item-img">
-                          <span class="soldout-item-name">Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)</span>
-                          <span class="soldout-item-auth">Phạm Lữ Ân</span>
-                          <span class="soldout-item-point">1683 điểm</span>
-                        </div>
-                      </li>
-                      <li class="rank-soldout-item">
-                        <div class="rank">4</div>
-                        <div class="soldout-item-info">
-                          <img src="https://cdn1.fahasa.com/media/catalog/product/4/0/40eebd4668f7f312da5486d5804cc24e.jpg" alt="Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)" class="soldout-item-img">
-                          <span class="soldout-item-name">Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)</span>
-                          <span class="soldout-item-auth">Phạm Lữ Ân</span>
-                          <span class="soldout-item-point">1683 điểm</span>
-                        </div>
-                      </li>
-                      <li class="rank-soldout-item">
-                        <div class="rank">5</div>
-                        <div class="soldout-item-info">
-                          <img src="https://cdn1.fahasa.com/media/catalog/product/4/0/40eebd4668f7f312da5486d5804cc24e.jpg" alt="Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)" class="soldout-item-img">
-                          <span class="soldout-item-name">Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)</span>
-                          <span class="soldout-item-auth">Phạm Lữ Ân</span>
-                          <span class="soldout-item-point">1683 điểm</span>
-                        </div>
-                      </li>
-                    </ul>
-                    <div class="rank-soldout-item-righ">
-                        <div class="soldout-item-info">
-                          <img src="https://cdn1.fahasa.com/media/catalog/product/z/6/z6561017314500_aafd0b9fa2adef2c6de6449617ee4c80.jpg" alt="Bông Sen Vàng" class="soldout-item-img">
-                          <span class="soldout-item-name">Bông Sen Vàng</span>
-                          <span class="soldout-item-auth">Tác giả: Sơn Tùng</span>
-                          <span class="soldout-item-publisher">Nhà xuất bản: Chính trị Quốc Gia Sự Thật</span>
-                          <span class="sold-out-item-price">143.000đ</span>
-                          <span class="sold-out-item-original-price">159.000đ</span>
-                          <span class="sold-out-item-discount">-10%</span>
-                          <p class="description">
-                            <b>Bông Sen Vàng</b><br>
-                            <b>"Búp sen xanh"</b> nói về khởi thủy gia đình và quãng đời thơ ấu của Hồ Chí Minh cho đến khi ra đi tìm đường cứu nước; <b>"Bông sen vàng"</b>, ở diện hẹp hơn cũng nói về thời ấu thơ và tuổi trẻ của Bác với tên gọi Nguyễn Sinh Côn sống với cha mẹ ở Huế - một trung tâm văn hóa, chính trị thời bấy giờ...
-                            <br>Sở dĩ nhà văn dành hẳn 1 cuốn tiểu thuyết để đề cập tới quãng đời này bởi, trong nhiều lần đàm đạo tại Chiếu Văn Văn Chương với các bạn văn, tác giả Sơn Tùng đều nhận định: “Đây là quãng thời gian rất quan trọng có tầm ảnh hưởng lớn đến nhân cách và tư tưởng của Bác sau này&rdq...
-                          </p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="right-sidebar"> </div>
-        </div>
-        </div>
+<body>
+  <header class="header">
+    <div class="header__banner">
+      <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-05-2025/Header_1263x60-15.png" alt="">
     </div>
-    <footer class="footer">
-        <p>000</p>
-        <div class="grid">
-            <div class="grid__row">
+    <div class="header-search">
+    <div class="header__logo">
+      <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png" class="logo-img" alt="logo">
+    </div>
+    
+    <div class="category-dropdown">
+      <button class="category-btn">
+        <img src="assets/img/category.png" alt="category" class="category-icon">
+        <span class="dropdown-arrow"></span>
+      </button>
+    </div>
+    
+    <div class="search-container">
+      <form action="search-header" class="search-form">
+        <input type="text" class="search-input" placeholder="Bút chấm đọc - Học tiếng Anh">
+        <button class="search-btn" type="submit">
+          <img src="assets/img/search.png" class="search-icon" alt="Tìm kiếm">
+        </button>
+      </form>
+    </div>
+    
+    <div class="header-icons">
+      <a href="#" class="icon-link">
+        <img src="assets/img/notification.png" alt="Thông Báo" class="icon-img">
+        <span class="icon-text">Thông Báo</span>
+      </a>
+      <a href="#" class="icon-link">
+        <img src="assets/img/shopping-cart.png" alt="Giỏ Hàng" class="icon-img">
+        <span class="icon-text">Giỏ Hàng</span>
+      </a>
+      <a href="#" class="icon-link">
+        <img src="assets/img/user.png" alt="Tài khoản" class="icon-img">
+        <span class="icon-text">Tài khoản</span>
+      </a>
+    </div>
+    
+    <div class="language-selector">
+      <button class="lang-toggle" onclick="toggleDropdown()">
+        <img src="assets/img/vietnam.png" alt="VN" class="flag-icon">
+        <span class="arrow"></span>
+      </button>
+      <div class="lang-dropdown" id="langDropdown">
+        <a href="?lang=vn" class="lang-option">
+          <img src="assets/img/vietnam.png" alt="VN" class="flag-icon"> VN
+        </a>
+        <a href="?lang=en" class="lang-option">
+          <img src="assets/img/english.png" alt="EN" class="flag-icon"> EN
+        </a>
+      </div>
+    </div>
+  </div>
+  </header>
+  <div class="app__main">
+    <div class="grid-container">
+      <div class="main-content">
+        <div class="banner-top">
+          <div class="banner-left">
+            <img src="https://cdn1.fahasa.com/media/magentothem/banner7/TueTriT6_840x320_1.jpg" alt="image banner left">
+          </div>
+          <div class="banner-right">
+            <div class="banner-right-top">
+              <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/homecreditT6_392x156.png"
+                alt="image banner right top">
             </div>
+            <div class="banner-right-bottom">
+              <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/ShopeeT6.png"
+                alt="image banner right bottom">
+            </div>
+          </div>
         </div>
-    </footer>
+        <div class="banner-bottom">
+          <div class="banner-bottom-item">
+            <img
+              src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/BackToSchool_TrangTong_SmallBanner_310x210.png"
+              alt="image banner item 1">
+          </div>
+          <div class="banner-bottom-item">
+            <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/CTMangaWeek_310x210.png"
+              alt="image banner item 2">
+          </div>
+          <div class="banner-bottom-item">
+            <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/Deli_KC_310x210.png"
+              alt="image banner item 3">
+          </div>
+          <div class="banner-bottom-item">
+            <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/NgoaiVan_T6_LDP_small4.png"
+              alt="image banner item 4">
+          </div>
+        </div>
+        <div class="icon-menu">
+          <ul class="icon-menu-list">
+            <li class="icon-menu-item">
+              <a href="#" class="icon-menu-item-link">
+                <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-07-2025/icon_6.7-01.png" alt="Sinh Nhật 10 Năm"
+                  class="icon-menu-img">Sinh Nhật 10 Năm
+              </a>
+            </li>
+            <li class="icon-menu-item">
+              <a href="#" class="icon-menu-item-link">
+                <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-07-2025/icon_GameSN10Nam.gif"
+                  alt="Điểm danh mỗi ngày" class="icon-menu-img">Điểm danh mỗi ngày
+              </a>
+            </li>
+            <li class="icon-menu-item">
+              <a href="#" class="icon-menu-item-link">
+                <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/Icon_TanViet_120x120.png" alt="Tân Việt"
+                  class="icon-menu-img">Tân Việt
+              </a>
+            </li>
+            <li class="icon-menu-item">
+              <a href="#" class="icon-menu-item-link">
+                <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-07-2025/Icon_SGBook_120x120.png" alt="SaiGonBooks"
+                  class="icon-menu-img">SaiGonBooks
+              </a>
+            </li>
+            <li class="icon-menu-item">
+              <a href="#" class="icon-menu-item-link">
+                <img src="https://cdn1.fahasa.com/media/wysiwyg/icon-menu/Icon_MaGiamGia_8px_1.png" alt="Mã Giảm Giá"
+                  class="icon-menu-img">Mã Giảm Giá
+              </a>
+            </li>
+            <li class="icon-menu-item">
+              <a href="#" class="icon-menu-item-link">
+                <img src="https://cdn1.fahasa.com/media/wysiwyg/icon-menu/Icon_SanPhamMoi_8px_1.png" alt="Sản Phẩm Mới"
+                  class="icon-menu-img">Sản Phẩm Mới
+              </a>
+            </li>
+            <li class="icon-menu-item">
+              <a href="#" class="icon-menu-item-link">
+                <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/Icon_SGK_120x120.png" alt="SGK 2025"
+                  class="icon-menu-img">SGK 2025
+              </a>
+            </li>
+            <li class="icon-menu-item">
+              <a href="#" class="icon-menu-item-link">
+                <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-01-2024/ChoDoCu.png" alt="Phiên Chợ Đồ Cũ"
+                  class="icon-menu-img">Phiên Chợ Đồ Cũ
+              </a>
+            </li>
+            <li class="icon-menu-item">
+              <a href="#" class="icon-menu-item-link">
+                <img src="https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/ICON/Icon_DonSi_120x120.png" alt="Bán Sỉ"
+                  class="icon-menu-img">Bán Sỉ
+              </a>
+            </li>
+            <li class="icon-menu-item">
+              <a href="#" class="icon-menu-item-link">
+                <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2024/icon_ManngaT06.png" alt="Manga"
+                  class="icon-menu-img">Manga
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="flash-sale">
+          <div class="flash-sale-inner">
+            <div class="banner-flash-sale">
+              <a href="#" class="flash-sale-banner">
+                <img
+                  src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/flashsale/label-flashsale.svg?q="
+                  alt="banner-flash-sale-img" class="banner-flash-sale-img">
+              </a>
+              <p class="ending-flash-sale">Kết thúc trong </p>
+              <span class="timer-ending-flash-sale">01</span>:<span class="timer-ending-flash-sale">17</span>:<span
+                class="timer-ending-flash-sale">01</span>
+              <a href="#" class="see-all">Xem tất cả</a><img src="assets/img/chevron.png" alt="">
+            </div>
+            <div class="flash-sale-hot-deals">
+              <ul class="flash-sale-list">
+                <li class="flash-sale-item">
+                  <a href="#" class="flash-sale-item-link">
+                    <img src="https://cdn1.fahasa.com/media/catalog/product/4/0/40eebd4668f7f312da5486d5804cc24e.jpg"
+                      alt="Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)" class="flash-sale-item-img">
+                    <span class="flash-sale-item-name">Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)</span>
+                    <div class="flash-sale-item-bottom">
+                      <div class="grid-flash-sale-item-left">
+                        <span class="price-flash-sale-item">Giá: 45.000đ</span>
+                        <span class="original-price-flash-sale-item">90.000</span>
+                      </div>
+                      <div class="grid-flash-sale-item-right">
+                        <span class="discount-flash-sale-item">-50%</span>
+                      </div>
+                    </div>
+                    <div class="sold-out-flash-sale-item">
+                      <span>Đã bán 15</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="flash-sale-item">
+                  <a href="#" class="flash-sale-item-link">
+                    <img
+                      src="https://cdn1.fahasa.com/media/catalog/product/z/6/z6553474839570_cbc862fae5de1e0201adc0beecdb8a49.jpg"
+                      alt="Ngược Dòng Yêu Thương" class="flash-sale-item-img">
+                    <span class="flash-sale-item-name">Ngược Dòng Yêu Thương</span>
+                    <div class="flash-sale-item-bottom">
+                      <div class="grid-flash-sale-item-left">
+                        <span class="price-flash-sale-item">Giá: 75.000đ</span>
+                        <span class="original-price-flash-sale-item">118.000</span>
+                      </div>
+                      <div class="grid-flash-sale-item-right">
+                        <span class="discount-flash-sale-item">-36%</span>
+                      </div>
+                    </div>
+                    <div class="sold-out-flash-sale-item">
+                      <span>Đã bán 15</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="flash-sale-item">
+                  <a href="#" class="flash-sale-item-link">
+                    <img src="https://cdn1.fahasa.com/media/catalog/product/b/_/b_n-sao-c_a-b_a-tr_c-li_t-_.jpg"
+                      alt="Linh Điểu" class="flash-sale-item-img">
+                    <span class="flash-sale-item-name">Linh Điểu</span>
+                    <div class="flash-sale-item-bottom">
+                      <div class="grid-flash-sale-item-left">
+                        <span class="price-flash-sale-item">Giá: 100.500đ</span>
+                        <span class="original-price-flash-sale-item">158.000</span>
+                      </div>
+                      <div class="grid-flash-sale-item-right">
+                        <span class="discount-flash-sale-item">-36%</span>
+                      </div>
+                    </div>
+                    <div class="sold-out-flash-sale-item">
+                      <span>Đã bán 15</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="flash-sale-item">
+                  <a href="#" class="flash-sale-item-link">
+                    <img src="https://cdn1.fahasa.com/media/catalog/product/b/_/b_a-1---b_ng-qua-_i-d_ng-_en.jpg"
+                      alt="Chú Bé Rắc Rối (2022)" class="flash-sale-item-img">
+                    <span class="flash-sale-item-name">Chú Bé Rắc Rối (2022)</span>
+                    <div class="flash-sale-item-bottom">
+                      <div class="grid-flash-sale-item-left">
+                        <span class="price-flash-sale-item">Giá: 71.500đ</span>
+                        <span class="original-price-flash-sale-item">95.000</span>
+                      </div>
+                      <div class="grid-flash-sale-item-right">
+                        <span class="discount-flash-sale-item">-24%</span>
+                      </div>
+                    </div>
+                    <div class="sold-out-flash-sale-item">
+                      <span>Đã bán 15</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="flash-sale-item">
+                  <a href="#" class="flash-sale-item-link">
+                    <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8934974185086.jpg"
+                      alt="Mèo Chiến Binh - Vào Trong Hoang Dã (Tái Bản 2019)" class="flash-sale-item-img">
+                    <span class="flash-sale-item-name">Mèo Chiến Binh - Vào Trong Hoang Dã (Tái Bản 2019)</span>
+                    <div class="flash-sale-item-bottom">
+                      <div class="grid-flash-sale-item-left">
+                        <span class="price-flash-sale-item">Giá: 61.500đ</span>
+                        <span class="original-price-flash-sale-item">88.000</span>
+                      </div>
+                      <div class="grid-flash-sale-item-right">
+                        <span class="discount-flash-sale-item">-30%</span>
+                      </div>
+                    </div>
+                    <div class="sold-out-flash-sale-item">
+                      <span>Đã bán 15</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="category">
+          <div class="category-top">
+            <img src="assets/img/category_banner_bottom.png" class="icon-category" alt="Danh mục sản phẩm">
+            <span class="category-top-name">Danh mục sản phẩm</span>
+          </div>
+          <div class="category-bottom">
+            <ul class="category-list">
+              <li class="category-item">
+                <a href="#" class="category-item-link">
+                  <img src="https://cdn1.fahasa.com/media/wysiwyg/HUYEN-1/4902505504877-removebg-preview.png"
+                    alt="Bút Cao Cấp Pilot" class="category-item-img">
+                  <span class="category-item-name">Bút Cao Cấp Pilot</span>
+                </a>
+              </li>
+              <li class="category-item">
+                <a href="#" class="category-item-link">
+                  <img
+                    src="https://cdn1.fahasa.com/media/wysiwyg/HUYEN-1/do-choi-tri-tue-gridlock-88-thu-thach-spin-games-6070059_8-removebg-preview.png"
+                    alt="Đồ Chơi Trí Tuệ" class="category-item-img">
+                  <span class="category-item-name">Đồ Chơi Trí Tuệ</span>
+                </a>
+              </li>
+              <li class="category-item">
+                <a href="#" class="category-item-link">
+                  <img src="https://cdn1.fahasa.com/media/wysiwyg/HUYEN-1/6902957275668-2-removebg-preview.png"
+                    alt="Thiết Bị Số" class="category-item-img">
+                  <span class="category-item-name">Thiết Bị Số</span>
+                </a>
+              </li>
+              <li class="category-item">
+                <a href="#" class="category-item-link">
+                  <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-06-2025/SGK-Lop3.jpg" alt="SGK 2025"
+                    class="category-item-img">
+                  <span class="category-item-name">SGK 2025</span>
+                </a>
+              </li>
+              <li class="category-item">
+                <a href="#" class="category-item-link">
+                  <img src="https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/Danh-muc-san-pham/2502/8935244874389.jpg"
+                    alt="Lịch Sử Việt Nam" class="category-item-img">
+                  <span class="category-item-name">Lịch Sử Việt Nam</span>
+                </a>
+              </li>
+              <li class="category-item">
+                <a href="#" class="category-item-link">
+                  <img src="https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/Danh-muc-tu-sach/8934974182375.jpg"
+                    alt="Văn Học" class="category-item-img">
+                  <span class="category-item-name">Văn Học</span>
+                </a>
+              </li>
+              <li class="category-item">
+                <a href="#" class="category-item-link">
+                  <img
+                    src="https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/Danh-muc-san-pham/240715/atomichabit100x100.jpg"
+                    alt="Tâm Lý Kỹ Năng" class="category-item-img">
+                  <span class="category-item-name">Tâm Lý Kỹ Năng</span>
+                </a>
+              </li>
+              <li class="category-item">
+                <a href="#" class="category-item-link">
+                  <img src="https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/ngoai-van-t1-24(1).jpg" alt="Ngoại Văn"
+                    class="category-item-img">
+                  <span class="category-item-name">Ngoại Văn</span>
+                </a>
+              </li>
+              <li class="category-item">
+                <a href="#" class="category-item-link">
+                  <img src="https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/Danh-muc-san-pham/bup-sen-xanh-100x100.png"
+                    alt="Thiếu Nhi" class="category-item-img">
+                  <span class="category-item-name">Thiếu Nhi</span>
+                </a>
+              </li>
+              <li class="category-item">
+                <a href="#" class="category-item-link">
+                  <img src="https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/Danh-muc-san-pham/240715/hsk100x100.jpg"
+                    alt="Sách Học Ngoại Ngữ" class="category-item-img">
+                  <span class="category-item-name">Sách Học Ngoại Ngữ</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="ranking-top-manga">
+          <div class="ranking-managa-header">
+            <img src="https://cdn1.fahasa.com/media/wysiwyg/background_top_order_manga/Icon_TOP.svg?q=11172"
+              alt="Bảng xếp hạng thợ săn Manga" class="ranking-manga-header-img">
+            <span class="ranking-manga-header-name">Bảng xếp hạng thợ săn Manga</span>
+          </div>
+          <div class="ranking-manga-container">
+            <div class="ranking-managa-poster">
+              <img src="assets/img/poster.jpg" class="ranking-managa-poster-img" alt="Bảng xếp hạng thợ săn Manga">
+            </div>
+            <div class="ranking-manga-main">
+              <p class="ranking-manga-name">Bảng xếp hạng</p>
+              <ul class="ranking-manga-list">
+                <li class="ranking-manga-items">
+                  <div class="ranking-manga-items-number">1</div>
+                  <div class="avatar">
+                    <img
+                      src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/icon_top1.png"
+                      class="ranking-manga-items-img" alt="avatar">
+                  </div>
+                  <div class="user-info">
+                    <div class="name">Nguyễn Dương Lập</div>
+                    <div class="id">*****71519</div>
+                  </div>
+                  <div class="ranking-manga-items-points">
+                    <div class="score-wrapper">
+                      <img
+                        src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/frame_total_top1.svg"
+                        class="score-frame" alt="coin">
+                      <span class="score-text">6.320.900</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="ranking-manga-items">
+                  <div class="ranking-manga-items-number">2</div>
+                  <div class="avatar">
+                    <img
+                      src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/icon_top2.png"
+                      class="ranking-manga-items-img" alt="avatar">
+                  </div>
+                  <div class="user-info">
+                    <div class="name">Nguyễn Hữu Thành</div>
+                    <div class="id">*****12345</div>
+                  </div>
+                  <div class="ranking-manga-items-points">
+                    <div class="score-wrapper">
+                      <img
+                        src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/frame_total_top2.svg"
+                        class="score-frame" alt="coin">
+                      <span class="score-text">6.230.250</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="ranking-manga-items">
+                  <div class="ranking-manga-items-number">3</div>
+                  <div class="avatar">
+                    <img
+                      src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/icon_top3.png"
+                      class="ranking-manga-items-img" alt="avatar">
+                  </div>
+                  <div class="user-info">
+                    <div class="name">Trần Văn An</div>
+                    <div class="id">*****67890</div>
+                  </div>
+                  <div class="ranking-manga-items-points">
+                    <div class="score-wrapper">
+                      <img
+                        src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/frame_total_top3.svg"
+                        class="score-frame" alt="coin">
+                      <span class="score-text">5.980.100</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="ranking-manga-items">
+                  <div class="ranking-manga-items-number">4</div>
+                  <div class="avatar">
+                    <img
+                      src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/icon_normal.png"
+                      class="ranking-manga-items-img" alt="avatar">
+                  </div>
+                  <div class="user-info">
+                    <div class="name">Lê Thị Mai</div>
+                    <div class="id">*****54321</div>
+                  </div>
+                  <div class="ranking-manga-items-points">
+                    <div class="score-wrapper">
+                      <img
+                        src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/frame_total_normal.svg"
+                        class="score-frame" alt="coin">
+                      <span class="score-text">5.750.800</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="ranking-manga-items">
+                  <div class="ranking-manga-items-number">5</div>
+                  <div class="avatar">
+                    <img
+                      src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/icon_normal.png"
+                      class="ranking-manga-items-img" alt="avatar">
+                  </div>
+                  <div class="user-info">
+                    <div class="name">Phạm Văn Bình</div>
+                    <div class="id">*****98765</div>
+                  </div>
+                  <div class="ranking-manga-items-points">
+                    <div class="score-wrapper">
+                      <img
+                        src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/marathon_images/frame_total_normal.svg"
+                        class="score-frame" alt="coin">
+                      <span class="score-text">5.500.450</span>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="logo-brand">
+          <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_DinhTi_115x115.png" alt="Đinh Tị Books"
+            class="logo-brand-item">
+          <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_HGBook_115x115.png" alt="HG Books"
+            class="logo-brand-item">
+          <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_NhaNam_115x115.png" alt="Nhã Nam Books"
+            class="logo-brand-item">
+          <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_patech_1_115x115.png" alt="SBoooks"
+            class="logo-brand-item">
+          <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_BinhRTay_Bitex_115x115.png" alt="Bitex"
+            class="logo-brand-item">
+          <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_Plus_115x115.png" alt="Plus"
+            class="logo-brand-item">
+          <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_ThienLong_115x115.png" alt="Thiên Long"
+            class="logo-brand-item">
+          <img src="https://cdn1.fahasa.com/media/wysiwyg/Hien_UI/LogoNCC/NCC_Deli_115x115.png" alt="Deli"
+            class="logo-brand-item">
+        </div>
+        <div class="rank-soldout-week">
+          <div class="rank-soldout-week-header">
+            <h3>Bảng xếp hạng bán chạy tuần</h3>
+          </div>
+          <div class="rank-soldout-menu">
+            <h3 class="rank-soldout-menu-name">Văn học</h3>
+            <h3 class="rank-soldout-menu-name">Kinh Tế</h3>
+            <h3 class="rank-soldout-menu-name">Tâm lý - Kỹ năng sống</h3>
+            <h3 class="rank-soldout-menu-name">Thiếu nhi</h3>
+            <h3 class="rank-soldout-menu-name">Sách học ngoại ngữ</h3>
+            <h3 class="rank-soldout-menu-name">Foreign books</h3>
+            <h3 class="rank-soldout-menu-name">Thể loại khác</h3>
+          </div>
+          <div class="rank-soldout-list">
+            <ul class="rank-soldout-list-left">
+              <li class="rank-soldout-item">
+                <div class="rank">01 <img
+                    src="https://www.fahasa.com/bong-sen-vang-an-ban-moi.html?fhs_campaign=bxh-fahasa"
+                    name="rank-soldout-item" alt=""></div>
+                <div class="soldout-item-info">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8932000134749_1.jpg"
+                    alt="Nếu Biết Trăm Năm Là Hữu Hạn - Ấn Bản Kỉ Niệm 10 Năm Xuất Bản (Tái Bản 2024)"
+                    class="soldout-item-img">
+                  <span class="soldout-item-name">Nếu Biết Trăm Năm Là Hữu Hạn - Ấn Bản Kỉ Niệm 10 Năm Xuất Bản (Tái Bản
+                    2024)</span>
+                  <span class="soldout-item-auth">Phạm Lữ Ân</span>
+                  <span class="soldout-item-point">1683 điểm</span>
+                </div>
+              </li>
+              <li class="rank-soldout-item">
+                <div class="rank">2</div>
+                <div class="soldout-item-info">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/4/0/40eebd4668f7f312da5486d5804cc24e.jpg"
+                    alt="Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)" class="soldout-item-img">
+                  <span class="soldout-item-name">Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)</span>
+                  <span class="soldout-item-auth">Phạm Lữ Ân</span>
+                  <span class="soldout-item-point">1683 điểm</span>
+                </div>
+              </li>
+              <li class="rank-soldout-item">
+                <div class="rank">3</div>
+                <div class="soldout-item-info">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/4/0/40eebd4668f7f312da5486d5804cc24e.jpg"
+                    alt="Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)" class="soldout-item-img">
+                  <span class="soldout-item-name">Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)</span>
+                  <span class="soldout-item-auth">Phạm Lữ Ân</span>
+                  <span class="soldout-item-point">1683 điểm</span>
+                </div>
+              </li>
+              <li class="rank-soldout-item">
+                <div class="rank">4</div>
+                <div class="soldout-item-info">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/4/0/40eebd4668f7f312da5486d5804cc24e.jpg"
+                    alt="Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)" class="soldout-item-img">
+                  <span class="soldout-item-name">Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)</span>
+                  <span class="soldout-item-auth">Phạm Lữ Ân</span>
+                  <span class="soldout-item-point">1683 điểm</span>
+                </div>
+              </li>
+              <li class="rank-soldout-item">
+                <div class="rank">5</div>
+                <div class="soldout-item-info">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/4/0/40eebd4668f7f312da5486d5804cc24e.jpg"
+                    alt="Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)" class="soldout-item-img">
+                  <span class="soldout-item-name">Nhật Ký Đặng Thùy Trâm (Tái Bản 2022)</span>
+                  <span class="soldout-item-auth">Phạm Lữ Ân</span>
+                  <span class="soldout-item-point">1683 điểm</span>
+                </div>
+              </li>
+            </ul>
+            <div class="rank-soldout-item-righ">
+              <div class="soldout-item-info">
+                <img
+                  src="https://cdn1.fahasa.com/media/catalog/product/z/6/z6561017314500_aafd0b9fa2adef2c6de6449617ee4c80.jpg"
+                  alt="Bông Sen Vàng" class="soldout-item-img">
+                <span class="soldout-item-name">Bông Sen Vàng</span>
+                <span class="soldout-item-auth">Tác giả: Sơn Tùng</span>
+                <span class="soldout-item-publisher">Nhà xuất bản: Chính trị Quốc Gia Sự Thật</span>
+                <span class="sold-out-item-price">143.000đ</span>
+                <span class="sold-out-item-original-price">159.000đ</span>
+                <span class="sold-out-item-discount">-10%</span>
+                <p class="description">
+                  <b>Bông Sen Vàng</b><br>
+                  <b>"Búp sen xanh"</b> nói về khởi thủy gia đình và quãng đời thơ ấu của Hồ Chí Minh cho đến khi ra đi
+                  tìm đường cứu nước; <b>"Bông sen vàng"</b>, ở diện hẹp hơn cũng nói về thời ấu thơ và tuổi trẻ của Bác
+                  với tên gọi Nguyễn Sinh Côn sống với cha mẹ ở Huế - một trung tâm văn hóa, chính trị thời bấy giờ...
+                  <br>Sở dĩ nhà văn dành hẳn 1 cuốn tiểu thuyết để đề cập tới quãng đời này bởi, trong nhiều lần đàm đạo
+                  tại Chiếu Văn Văn Chương với các bạn văn, tác giả Sơn Tùng đều nhận định: “Đây là quãng thời gian rất
+                  quan trọng có tầm ảnh hưởng lớn đến nhân cách và tư tưởng của Bác sau này&rdq...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="suggestion-books">
+          <div class="suggestion-books-header">
+            <h3 class="suggestion-books-title">Gợi ý cho bạn</h3>
+          </div>
+          <div class="suggestion-books-list">
+            <ul class="suggestion-books-items">
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/n/x/nxbtre_full_05422022_014206.jpg"
+                    alt="Trên Đường Băng (Tái Bản 2022)" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Trên Đường Băng (Tái Bản 2022)</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">89.000 đ</span>
+                      <span class="original-price-suggestion-books-item">105.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-15%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 422</span>
+                  </div>
+                </a>
+              </li>
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/2/0/2021_07_12_14_40_09_1.jpg"
+                    alt="Kỷ Luật Tích Cực Cho Trẻ Ở Lứa Tuổi Thiếu Niên" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Kỷ Luật Tích Cực Cho Trẻ Ở Lứa Tuổi Thiếu Niên</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">96.000 đ</span>
+                      <span class="original-price-suggestion-books-item">120.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-20%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 93</span>
+                  </div>
+                </a>
+              </li>
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935309503834.jpg"
+                    alt="Nuance - 50 Sắc Thái Của Từ" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Nuance - 50 Sắc Thái Của Từ</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">135.000 đ</span>
+                      <span class="original-price-suggestion-books-item">159.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-15%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 540</span>
+                  </div>
+                </a>
+              </li>
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img
+                    src="https://cdn1.fahasa.com/media/flashmagazine/images/page_images/nhoc_ti_ty_phu/2023_04_10_08_30_10_1-390x510.jpg?_gl=1*1suow48*_ga*MzA3MzQ0MjQwLjE3NTEyMDYxNzk.*_ga_D3YYPWQ9LN*czE3NTM3NzgxMTUkbzE3JGcxJHQxNzUzNzc4MjQ4JGo2MCRsMCRoMA..*_gcl_aw*R0NMLjE3NTEyMDYxODAuQ2owS0NRand5SVBEQmhEQkFSSXNBSEp5eVZnLWhxZG1sYlA4aFoxNVl2ZlhWWV80UnRuR1dQTTJfVGhDUkx4TnlCOUo4d2lZMmN2SVhCNGFBaExwRUFMd193Y0I.*_gcl_au*MTIyMzEwMTI1My4xNzUxMjA2MTc5*_ga_460L9JMC2G*czE3NTM3NzY3NTQkbzE5JGcxJHQxNzUzNzc4MjQ5JGo1OSRsMCRoNzgxNzQ3MjIx"
+                    alt="Nhóc Tì Tỷ Phú" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Nhóc Tì Tỷ Phú</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">81.750 đ</span>
+                      <span class="original-price-suggestion-books-item">109.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-25%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 76</span>
+                  </div>
+                </a>
+              </li>
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                    alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">78.840 đ</span>
+                      <span class="original-price-suggestion-books-item">108.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-27%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 478</span>
+                  </div>
+                </a>
+              </li>
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                    alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">78.840 đ</span>
+                      <span class="original-price-suggestion-books-item">108.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-27%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 478</span>
+                  </div>
+                </a>
+              </li>
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                    alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">78.840 đ</span>
+                      <span class="original-price-suggestion-books-item">108.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-27%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 478</span>
+                  </div>
+                </a>
+              </li>
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                    alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">78.840 đ</span>
+                      <span class="original-price-suggestion-books-item">108.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-27%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 478</span>
+                  </div>
+                </a>
+              </li>
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                    alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">78.840 đ</span>
+                      <span class="original-price-suggestion-books-item">108.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-27%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 478</span>
+                  </div>
+                </a>
+              </li>
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                    alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">78.840 đ</span>
+                      <span class="original-price-suggestion-books-item">108.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-27%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 478</span>
+                  </div>
+                </a>
+              </li>
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                    alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">78.840 đ</span>
+                      <span class="original-price-suggestion-books-item">108.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-27%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 478</span>
+                  </div>
+                </a>
+              </li>
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                    alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">78.840 đ</span>
+                      <span class="original-price-suggestion-books-item">108.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-27%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 478</span>
+                  </div>
+                </a>
+              </li>
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                    alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">78.840 đ</span>
+                      <span class="original-price-suggestion-books-item">108.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-27%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 478</span>
+                  </div>
+                </a>
+              </li>
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                    alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">78.840 đ</span>
+                      <span class="original-price-suggestion-books-item">108.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-27%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 478</span>
+                  </div>
+                </a>
+              </li>
+              <li class="suggestion-books-item">
+                <a href="#" class="suggestion-books-item-link">
+                  <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                    alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                  <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                  <div class="suggestion-books-item-bottom">
+                    <div class="grid-suggestion-books-item-left">
+                      <span class="price-suggestion-books-item">78.840 đ</span>
+                      <span class="original-price-suggestion-books-item">108.000 đ</span>
+                    </div>
+                    <div class="grid-suggestion-books-item-right">
+                      <span class="discount-suggestion-books-item">-27%</span>
+                    </div>
+                  </div>
+                  <div class="sold-out-suggestion-books">
+                    <span>Đã bán 478</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <div class="suggestion-books-bottom">
+              <a href="#" class="suggestion-books-bottom-link">Xem thêm</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="grid__footer">
+      <div class="newsletter">
+        <span class="newsletter-title">📩 ĐĂNG KÝ NHẬN BẢN TIN</span>
+        <input type="email" placeholder="Nhập địa chỉ email của bạn" />
+        <button>Đăng ký</button>
+      </div>
+
+      <div class="footer-content">
+        <div class="footer-left">
+          <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/logo.png" alt="Fahasa"
+            class="footer-logo" />
+          <p>Lầu 5, 387-389 Hai Bà Trưng Quận 3 TP HCM<br />
+            Công Ty Cổ Phần Phát Hành Sách TP HCM - FAHASA<br />
+            60 - 62 Lê Lợi, Quận 1, TP. HCM, Việt Nam</p>
+          <p>Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi. KHÔNG hỗ trợ đặt mua và nhận hàng trực tiếp tại
+            văn phòng cũng như tất cả Hệ Thống Fahasa trên toàn quốc.</p>
+          <div class="social-icons">
+            <i class="fab fa-facebook-f">
+              <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/footer/Facebook-on.png" alt="">
+            </i>
+            <i class="fab fa-instagram">
+              <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/Insta-on.png" alt="">
+            </i>
+            <i class="fab fa-youtube">
+              <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/Youtube-on.png" alt="">
+            </i>
+            <i class="fab fa-twitter">
+              <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/tumblr-on.png" alt="">
+            </i>
+            <i class="fab fa-tiktok">
+              <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/pinterest-on.png" alt="">
+            </i>
+          </div>
+          <div class="app-links">
+            <div class="shipping-icons">
+              <img src="https://cdn1.fahasa.com/media/wysiwyg/Logo-NCC/android1.png" height="24" />
+              <img src="https://cdn1.fahasa.com/media/wysiwyg/Logo-NCC/appstore1.png" height="24" />
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-links">
+            <div class="column">
+              <h4>DỊCH VỤ</h4>
+              <ul>
+                <li>Điều khoản sử dụng</li>
+                <li>Chính sách bảo mật</li>
+                <li>Chính sách thanh toán</li>
+                <li>Giới thiệu Fahasa</li>
+                <li>Hệ thống nhà sách</li>
+              </ul>
+            </div>
+            <div class="column">
+              <h4>HỖ TRỢ</h4>
+              <ul>
+                <li>Chính sách đổi trả</li>
+                <li>Chính sách bồi hoàn</li>
+                <li>Chính sách vận chuyển</li>
+                <li>Chính sách khách sỉ</li>
+              </ul>
+            </div>
+            <div class="column">
+              <h4>TÀI KHOẢN CỦA TÔI</h4>
+              <ul>
+                <li>Đăng nhập / Tạo tài khoản</li>
+                <li>Thay đổi địa chỉ</li>
+                <li>Chi tiết tài khoản</li>
+                <li>Lịch sử mua hàng</li>
+              </ul>
+            </div>
+            <div class="column contact">
+              <h4>LIÊN HỆ</h4>
+              <p>📍 60-62 Lê Lợi, Q.1, TP. HCM</p>
+              <p>📧 cskh@fahasa.com.vn</p>
+              <p>📞 1900 636 467</p>
+            </div>
+            <div class="payment-logos">
+              <img src="./assets/img/taitro.png" alt="Đối tác liên kết">
+            </div>
+            
+          </div>
+        </div>
+        <p class="copyright">Giấy chứng nhận Đăng ký Kinh doanh số 0304132047 do Sở KH&ĐT TP.HCM cấp ngày
+              20/12/2005, đăng ký thay đổi lần thứ 10, ngày 20/05/2022.</p>
+      </div>
+  </footer>
 </body>
+
 </html>

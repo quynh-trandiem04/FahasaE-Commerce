@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mua sắm trực tuyến tại Fahasa, sàn thương mại điện tử bán sách hàng đầu Việt Nam.">
+    <meta name="keywords" content="Fahasa sàn thương mại điện tử bán sách">
+    <meta name="author" content="Quinn">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/img/logo.png">
+    <title>Fahasa - Nhà sách trực tuyến</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/account.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__banner">
+            <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-05-2025/Header_1263x60-15.png" alt="">
+        </div>
+        <div class="header-search">
+            <div class="header__logo">
+                <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png"
+                    class="logo-img" alt="logo">
+            </div>
+
+            <div class="category-dropdown">
+                <button class="category-btn">
+                    <img src="assets/img/category.png" alt="category" class="category-icon">
+                    <span class="dropdown-arrow"></span>
+                </button>
+            </div>
+
+            <div class="search-container">
+                <form action="search-header" class="search-form">
+                    <input type="text" class="search-input" placeholder="Bút chấm đọc - Học tiếng Anh">
+                    <button class="search-btn" type="submit">
+                        <img src="assets/img/search.png" class="search-icon" alt="Tìm kiếm">
+                    </button>
+                </form>
+            </div>
+
+            <div class="header-icons">
+                <a href="#" class="icon-link">
+                    <img src="assets/img/notification.png" alt="Thông Báo" class="icon-img">
+                    <span class="icon-text">Thông Báo</span>
+                </a>
+                <a href="#" class="icon-link">
+                    <img src="assets/img/shopping-cart.png" alt="Giỏ Hàng" class="icon-img">
+                    <span class="icon-text">Giỏ Hàng</span>
+                </a>
+                <a href="#" class="icon-link">
+                    <img src="assets/img/user.png" alt="Tài khoản" class="icon-img">
+                    <span class="icon-text">Tài khoản</span>
+                </a>
+            </div>
+
+            <div class="language-selector">
+                <button class="lang-toggle" onclick="toggleDropdown()">
+                    <img src="assets/img/vietnam.png" alt="VN" class="flag-icon">
+                    <span class="arrow"></span>
+                </button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <a href="?lang=vn" class="lang-option">
+                        <img src="assets/img/vietnam.png" alt="VN" class="flag-icon"> VN
+                    </a>
+                    <a href="?lang=en" class="lang-option">
+                        <img src="assets/img/english.png" alt="EN" class="flag-icon"> EN
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="grid-container">
+            <div class="main-content">
+                <div class="content-navigation">
+                    <div class="sidebar-navigation">
+                        <section class="information-user">
+                            <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_rank_silver.png"
+                                class="avatar-rank" alt="Avatar Rank Silver">
+                            <h3 class="user-name">Trần Diễm Quỳnh</h3>
+                            <div class="rank-level">Thành viên bạc</div>
+                            <div class="F-point">F-Point tích lũy <span class="bold">0</span></div>
+                            <div class="update-rank">Thêm <span class="bold">30.000</span> để nâng hạng vàng</div>
+                        </section>
+                        <nav>
+                            <ul class="select-box">
+                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/account.svg" class="icon-item" alt="">Thông tin tài khoản</li>
+                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/orders.svg" class="icon-item" alt="">Đơn hàng của tôi</li>
+                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/vouchers.svg" class="icon-item" alt="">Ví voucher</li>
+                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/fpoint.svg" class="icon-item" alt="">Tài khoản F-Point / Freeship</li>
+                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/notification.svg" class="icon-item" alt="">Thông báo</li>
+                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/wishlist.svg" class="icon-item" alt="">Sản phẩm yêu thích</li>
+                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/seriesbook.svg" class="icon-item" alt="">Sách theo bộ</li>
+                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/reviews.svg" class="icon-item" alt="">Nhận xét của tôi</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <main class="body-navigation">
+                        <div class="empty-cart">
+                            <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/checkout_cart/ico_emptycart.svg"
+                                class="img-empty-cart" alt="Giỏ hàng trống">
+                            <h2 class="title-empty-cart">Bạn chưa có đơn hàng nào.</h2>
+                        </div>
+                    </main>
+                </div>
+                <div class="suggestion-books">
+                    <div class="suggestion-books-header">
+                        <h3 class="suggestion-books-title">Gợi ý cho bạn</h3>
+                    </div>
+                    <div class="suggestion-books-list">
+                        <ul class="suggestion-books-items">
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/catalog/product/n/x/nxbtre_full_05422022_014206.jpg"
+                                        alt="Trên Đường Băng (Tái Bản 2022)" class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Trên Đường Băng (Tái Bản 2022)</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">89.000 đ</span>
+                                            <span class="original-price-suggestion-books-item">105.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-15%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 422</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/catalog/product/2/0/2021_07_12_14_40_09_1.jpg"
+                                        alt="Kỷ Luật Tích Cực Cho Trẻ Ở Lứa Tuổi Thiếu Niên"
+                                        class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Kỷ Luật Tích Cực Cho Trẻ Ở Lứa Tuổi Thiếu
+                                        Niên</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">96.000 đ</span>
+                                            <span class="original-price-suggestion-books-item">120.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-20%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 93</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935309503834.jpg"
+                                        alt="Nuance - 50 Sắc Thái Của Từ" class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Nuance - 50 Sắc Thái Của Từ</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">135.000 đ</span>
+                                            <span class="original-price-suggestion-books-item">159.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-15%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 540</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/flashmagazine/images/page_images/nhoc_ti_ty_phu/2023_04_10_08_30_10_1-390x510.jpg?_gl=1*1suow48*_ga*MzA3MzQ0MjQwLjE3NTEyMDYxNzk.*_ga_D3YYPWQ9LN*czE3NTM3NzgxMTUkbzE3JGcxJHQxNzUzNzc4MjQ4JGo2MCRsMCRoMA..*_gcl_aw*R0NMLjE3NTEyMDYxODAuQ2owS0NRand5SVBEQmhEQkFSSXNBSEp5eVZnLWhxZG1sYlA4aFoxNVl2ZlhWWV80UnRuR1dQTTJfVGhDUkx4TnlCOUo4d2lZMmN2SVhCNGFBaExwRUFMd193Y0I.*_gcl_au*MTIyMzEwMTI1My4xNzUxMjA2MTc5*_ga_460L9JMC2G*czE3NTM3NzY3NTQkbzE5JGcxJHQxNzUzNzc4MjQ5JGo1OSRsMCRoNzgxNzQ3MjIx"
+                                        alt="Nhóc Tì Tỷ Phú" class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Nhóc Tì Tỷ Phú</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">81.750 đ</span>
+                                            <span class="original-price-suggestion-books-item">109.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-25%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 76</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                                        alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">78.840 đ</span>
+                                            <span class="original-price-suggestion-books-item">108.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-27%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 478</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                                        alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">78.840 đ</span>
+                                            <span class="original-price-suggestion-books-item">108.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-27%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 478</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                                        alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">78.840 đ</span>
+                                            <span class="original-price-suggestion-books-item">108.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-27%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 478</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                                        alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">78.840 đ</span>
+                                            <span class="original-price-suggestion-books-item">108.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-27%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 478</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                                        alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">78.840 đ</span>
+                                            <span class="original-price-suggestion-books-item">108.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-27%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 478</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                                        alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">78.840 đ</span>
+                                            <span class="original-price-suggestion-books-item">108.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-27%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 478</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                                        alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">78.840 đ</span>
+                                            <span class="original-price-suggestion-books-item">108.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-27%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 478</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                                        alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">78.840 đ</span>
+                                            <span class="original-price-suggestion-books-item">108.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-27%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 478</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                                        alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">78.840 đ</span>
+                                            <span class="original-price-suggestion-books-item">108.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-27%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 478</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                                        alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">78.840 đ</span>
+                                            <span class="original-price-suggestion-books-item">108.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-27%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 478</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="suggestion-books-item">
+                                <a href="#" class="suggestion-books-item-link">
+                                    <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935086855539.jpg"
+                                        alt="Sức Mạnh Của Ngôn Từ" class="suggestion-books-item-img">
+                                    <span class="suggestion-books-item-name">Sức Mạnh Của Ngôn Từ</span>
+                                    <div class="suggestion-books-item-bottom">
+                                        <div class="grid-suggestion-books-item-left">
+                                            <span class="price-suggestion-books-item">78.840 đ</span>
+                                            <span class="original-price-suggestion-books-item">108.000 đ</span>
+                                        </div>
+                                        <div class="grid-suggestion-books-item-right">
+                                            <span class="discount-suggestion-books-item">-27%</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out-suggestion-books">
+                                        <span>Đã bán 478</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="suggestion-books-bottom">
+                            <a href="#" class="suggestion-books-bottom-link">Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="grid__footer">
+            <div class="newsletter">
+                <span class="newsletter-title">📩 ĐĂNG KÝ NHẬN BẢN TIN</span>
+                <input type="email" placeholder="Nhập địa chỉ email của bạn" />
+                <button>Đăng ký</button>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-left">
+                    <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/logo.png" alt="Fahasa"
+                        class="footer-logo" />
+                    <p>Lầu 5, 387-389 Hai Bà Trưng Quận 3 TP HCM<br />
+                        Công Ty Cổ Phần Phát Hành Sách TP HCM - FAHASA<br />
+                        60 - 62 Lê Lợi, Quận 1, TP. HCM, Việt Nam</p>
+                    <p>Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi. KHÔNG hỗ trợ đặt mua và nhận hàng
+                        trực tiếp tại
+                        văn phòng cũng như tất cả Hệ Thống Fahasa trên toàn quốc.</p>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook-f">
+                            <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/footer/Facebook-on.png"
+                                alt="">
+                        </i>
+                        <i class="fab fa-instagram">
+                            <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/Insta-on.png"
+                                alt="">
+                        </i>
+                        <i class="fab fa-youtube">
+                            <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/Youtube-on.png"
+                                alt="">
+                        </i>
+                        <i class="fab fa-twitter">
+                            <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/tumblr-on.png"
+                                alt="">
+                        </i>
+                        <i class="fab fa-tiktok">
+                            <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/pinterest-on.png"
+                                alt="">
+                        </i>
+                    </div>
+                    <div class="app-links">
+                        <div class="shipping-icons">
+                            <img src="https://cdn1.fahasa.com/media/wysiwyg/Logo-NCC/android1.png" height="24" />
+                            <img src="https://cdn1.fahasa.com/media/wysiwyg/Logo-NCC/appstore1.png" height="24" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <div class="column">
+                            <h4>DỊCH VỤ</h4>
+                            <ul>
+                                <li>Điều khoản sử dụng</li>
+                                <li>Chính sách bảo mật</li>
+                                <li>Chính sách thanh toán</li>
+                                <li>Giới thiệu Fahasa</li>
+                                <li>Hệ thống nhà sách</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>HỖ TRỢ</h4>
+                            <ul>
+                                <li>Chính sách đổi trả</li>
+                                <li>Chính sách bồi hoàn</li>
+                                <li>Chính sách vận chuyển</li>
+                                <li>Chính sách khách sỉ</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>TÀI KHOẢN CỦA TÔI</h4>
+                            <ul>
+                                <li>Đăng nhập / Tạo tài khoản</li>
+                                <li>Thay đổi địa chỉ</li>
+                                <li>Chi tiết tài khoản</li>
+                                <li>Lịch sử mua hàng</li>
+                            </ul>
+                        </div>
+                        <div class="column contact">
+                            <h4>LIÊN HỆ</h4>
+                            <p>📍 60-62 Lê Lợi, Q.1, TP. HCM</p>
+                            <p>📧 cskh@fahasa.com.vn</p>
+                            <p>📞 1900 636 467</p>
+                        </div>
+                        <div class="payment-logos">
+                            <img src="./assets/img/taitro.png" alt="Đối tác liên kết">
+                        </div>
+
+                    </div>
+                </div>
+                <p class="copyright">Giấy chứng nhận Đăng ký Kinh doanh số 0304132047 do Sở KH&ĐT TP.HCM cấp ngày
+                    20/12/2005, đăng ký thay đổi lần thứ 10, ngày 20/05/2022.</p>
+            </div>
+    </footer>
+</body>
+
+</html>

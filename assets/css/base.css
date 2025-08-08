@@ -1,7 +1,30 @@
 :root {
   --white-color: #fff;
   --black-color: #333333;
-  --flash-sale-color: #E94850;
-  --primary-color: #C92127;
-  --header-color: #F56068;
+  --flash-sale-color: #e94850;
+  --primary-color: #c92127;
+  --header-color: #f56068;
+}
+.main-content{
+  min-height: 200px;
+  padding: 15px 0;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+}
+.grid-container{
+  background-color: #f0f0f0;
+}
+.grid-header-search{
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+}
+.right-sidebar {
+  background: #f0f0f0;
+}
+.footer{
+  background-color: #f0f0f0;
+}
+.grid__footer{
+  margin-left: 7.5%;
+  margin-right: 7.5%;
 }

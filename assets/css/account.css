@@ -1,0 +1,90 @@
+.content-navigation {
+    display: flex;
+    margin: 0px auto 15px;
+}
+.sidebar-navigation{
+    background-color: #ffffff;
+    width: 250px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.body-navigation{
+    background-color: #ffffff;
+}
+.alert.alert-warning{
+    margin: 10px;
+    background-color: #f0f0f0;
+}
+.information-user {
+    text-align: center;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e0e4ec;
+}
+.avatar-rank {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 12px;
+    padding-top: 20px;
+}
+.user-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+}
+.rank-level {
+    background: #dde3ed;
+    color: #5c6bc0;
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+.F-point, .update-rank {
+    font-size: 0.97rem;
+    color: #878787;
+    margin-bottom: 2px;
+}
+.bold {
+    font-weight: bold;
+    color: #2f80ed;
+}
+.select-box {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.empty-cart {
+    min-width: 1000px;
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.item-select {
+    display: flex;
+    align-items: center;   
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #374151;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.icon-item {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    display: inline-block;
+    object-fit: contain;
+    flex-shrink: 0;      
+}
+.title-empty-cart{
+    margin-top: 10px;
+}
