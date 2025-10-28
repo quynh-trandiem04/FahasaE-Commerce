@@ -22,56 +22,63 @@
       <img src="https://cdn1.fahasa.com/media/wysiwyg/Thang-05-2025/Header_1263x60-15.png" alt="">
     </div>
     <div class="header-search">
-    <div class="header__logo">
-      <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png" class="logo-img" alt="logo">
-    </div>
-    
-    <div class="category-dropdown">
-      <button class="category-btn">
-        <img src="assets/img/category.png" alt="category" class="category-icon">
-        <span class="dropdown-arrow"></span>
-      </button>
-    </div>
-    
-    <div class="search-container">
-      <form action="search-header" class="search-form">
-        <input type="text" class="search-input" placeholder="Bút chấm đọc - Học tiếng Anh">
-        <button class="search-btn" type="submit">
-          <img src="assets/img/search.png" class="search-icon" alt="Tìm kiếm">
+      <div class="header__logo">
+        <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png" class="logo-img"
+          alt="logo">
+      </div>
+
+      <div class="category-dropdown">
+        <button class="category-btn">
+          <img src="assets/img/category.png" alt="category" class="category-icon">
+          <span class="dropdown-arrow"></span>
         </button>
-      </form>
-    </div>
-    
-    <div class="header-icons">
-      <a href="#" class="icon-link">
-        <img src="assets/img/notification.png" alt="Thông Báo" class="icon-img">
-        <span class="icon-text">Thông Báo</span>
-      </a>
-      <a href="#" class="icon-link">
-        <img src="assets/img/shopping-cart.png" alt="Giỏ Hàng" class="icon-img">
-        <span class="icon-text">Giỏ Hàng</span>
-      </a>
-      <a href="#" class="icon-link">
-        <img src="assets/img/user.png" alt="Tài khoản" class="icon-img">
-        <span class="icon-text">Tài khoản</span>
-      </a>
-    </div>
-    
-    <div class="language-selector">
-      <button class="lang-toggle" onclick="toggleDropdown()">
-        <img src="assets/img/vietnam.png" alt="VN" class="flag-icon">
-        <span class="arrow"></span>
-      </button>
-      <div class="lang-dropdown" id="langDropdown">
-        <a href="?lang=vn" class="lang-option">
-          <img src="assets/img/vietnam.png" alt="VN" class="flag-icon"> VN
+      </div>
+
+      <div class="search-container">
+        <form action="search-header" class="search-form">
+          <input type="text" class="search-input" placeholder="Bút chấm đọc - Học tiếng Anh" autocomplete="off"
+            id="searchInput">
+          <button type="button" class="search-clear" id="searchClear" title="Xóa nội dung tìm kiếm"
+            aria-label="Xóa nội dung tìm kiếm"></button>
+          <button class="search-btn" type="submit" id="searchButton">
+            <img src="assets/img/search.png" class="search-icon" alt="Tìm kiếm">
+          </button>
+        </form>
+        <div class="search-suggestions" id="searchSuggestions">
+          <!-- Suggestions sẽ được thêm bằng JavaScript -->
+        </div>
+      </div>
+
+      <div class="header-icons">
+        <a href="#" class="icon-link">
+          <img src="assets/img/notification.png" alt="Thông Báo" class="icon-img">
+          <span class="icon-text">Thông Báo</span>
         </a>
-        <a href="?lang=en" class="lang-option">
-          <img src="assets/img/english.png" alt="EN" class="flag-icon"> EN
+        <a href="#" class="icon-link">
+          <img src="assets/img/shopping-cart.png" alt="Giỏ Hàng" class="icon-img">
+          <span class="icon-text">Giỏ Hàng</span>
+        </a>
+        <a href="#" class="icon-link">
+          <img src="assets/img/user.png" alt="Tài khoản" class="icon-img">
+          <span class="icon-text">Tài khoản</span>
         </a>
       </div>
+
+      <div class="language-selector">
+        <button class="lang-toggle" onclick="toggleDropdown()">
+          <img src="assets/img/vietnam.png" alt="VN" class="flag-icon">
+          <span class="arrow"></span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <a href="?lang=vn" class="lang-option">
+            <img src="assets/img/vietnam.png" alt="VN" class="flag-icon"> VN
+          </a>
+          <a href="?lang=en" class="lang-option">
+            <img src="assets/img/english.png" alt="EN" class="flag-icon"> EN
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
   </header>
   <div class="app__main">
     <div class="grid-container">
@@ -983,13 +990,229 @@
             <div class="payment-logos">
               <img src="./assets/img/taitro.png" alt="Đối tác liên kết">
             </div>
-            
+
           </div>
         </div>
         <p class="copyright">Giấy chứng nhận Đăng ký Kinh doanh số 0304132047 do Sở KH&ĐT TP.HCM cấp ngày
-              20/12/2005, đăng ký thay đổi lần thứ 10, ngày 20/05/2022.</p>
+          20/12/2005, đăng ký thay đổi lần thứ 10, ngày 20/05/2022.</p>
       </div>
   </footer>
+
+  <script>
+    // Dữ liệu gợi ý tìm kiếm mẫu
+    const searchSuggestions = [
+      { text: 'Sách văn học', category: 'Danh mục' },
+      { text: 'Sách thiếu nhi', category: 'Danh mục' },
+      { text: 'Sách học ngoại ngữ', category: 'Danh mục' },
+      { text: 'Tâm lý kỹ năng sống', category: 'Danh mục' },
+      { text: 'Bút chấm đọc - Học tiếng Anh', category: 'Sản phẩm' },
+      { text: 'Nguyễn Nhật Ánh', category: 'Tác giả' },
+      { text: 'Nhật ký Đặng Thùy Trâm', category: 'Sản phẩm' },
+      { text: 'Atomic Habits', category: 'Sản phẩm' },
+      { text: 'Doraemon', category: 'Truyện tranh' },
+      { text: 'One Piece', category: 'Manga' }
+    ];
+
+    // JavaScript cho dropdown ngôn ngữ
+    function toggleDropdown() {
+      const dropdown = document.getElementById('langDropdown');
+      dropdown.classList.toggle('show');
+    }
+
+    // Đóng dropdown khi click bên ngoài
+    window.onclick = function (event) {
+      if (!event.target.matches('.lang-toggle')) {
+        const dropdown = document.getElementById('langDropdown');
+        if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      }
+    }
+
+    // Search functionality
+    function initSearchFeatures() {
+      const searchInput = document.getElementById('searchInput');
+      const searchSuggestionsDiv = document.getElementById('searchSuggestions');
+      const searchClear = document.getElementById('searchClear');
+      const searchForm = document.querySelector('.search-form');
+      let currentSuggestionIndex = -1;
+
+      // Hiện/ẩn nút clear
+      function toggleClearButton() {
+        if (searchInput.value.length > 0) {
+          searchClear.classList.add('show');
+        } else {
+          searchClear.classList.remove('show');
+        }
+      }
+
+      // Hiển thị gợi ý
+      function showSuggestions(query) {
+        if (query.length < 2) {
+          hideSuggestions();
+          return;
+        }
+
+        const filteredSuggestions = searchSuggestions.filter(item =>
+          item.text.toLowerCase().includes(query.toLowerCase())
+        );
+
+        if (filteredSuggestions.length > 0) {
+          searchSuggestionsDiv.innerHTML = filteredSuggestions.map((item, index) => `
+            <div class="suggestion-item" data-index="${index}" data-text="${item.text}">
+              <svg class="suggestion-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+              </svg>
+              <span class="suggestion-text">${item.text}</span>
+              <span class="suggestion-category">${item.category}</span>
+            </div>
+          `).join('');
+          searchSuggestionsDiv.classList.add('show');
+        } else {
+          hideSuggestions();
+        }
+      }
+
+      // Ẩn gợi ý
+      function hideSuggestions() {
+        searchSuggestionsDiv.classList.remove('show');
+        currentSuggestionIndex = -1;
+      }
+
+      // Xử lý keyboard navigation
+      function handleKeyboardNavigation(e) {
+        const suggestions = searchSuggestionsDiv.querySelectorAll('.suggestion-item');
+
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          currentSuggestionIndex = Math.min(currentSuggestionIndex + 1, suggestions.length - 1);
+          updateActiveSuggestion(suggestions);
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          currentSuggestionIndex = Math.max(currentSuggestionIndex - 1, -1);
+          updateActiveSuggestion(suggestions);
+        } else if (e.key === 'Enter') {
+          if (currentSuggestionIndex >= 0) {
+            e.preventDefault();
+            selectSuggestion(suggestions[currentSuggestionIndex]);
+          }
+        } else if (e.key === 'Escape') {
+          hideSuggestions();
+          searchInput.blur();
+        }
+      }
+
+      // Cập nhật suggestion đang active
+      function updateActiveSuggestion(suggestions) {
+        suggestions.forEach((item, index) => {
+          item.classList.toggle('active', index === currentSuggestionIndex);
+        });
+      }
+
+      // Chọn suggestion
+      function selectSuggestion(suggestionElement) {
+        const text = suggestionElement.getAttribute('data-text');
+        searchInput.value = text;
+        hideSuggestions();
+        toggleClearButton();
+        searchInput.focus();
+      }
+
+      // Event listeners
+      searchInput.addEventListener('input', function () {
+        const query = this.value.trim();
+        toggleClearButton();
+        showSuggestions(query);
+      });
+
+      searchInput.addEventListener('keydown', handleKeyboardNavigation);
+
+      searchInput.addEventListener('focus', function () {
+        if (this.value.length >= 2) {
+          showSuggestions(this.value);
+        }
+      });
+
+      // Click trên suggestion
+      searchSuggestionsDiv.addEventListener('click', function (e) {
+        const suggestionItem = e.target.closest('.suggestion-item');
+        if (suggestionItem) {
+          selectSuggestion(suggestionItem);
+        }
+      });
+
+      // Nút clear
+      searchClear.addEventListener('click', function () {
+        searchInput.value = '';
+        hideSuggestions();
+        toggleClearButton();
+        searchInput.focus();
+      });
+
+      // Ẩn suggestions khi click bên ngoài
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.search-container')) {
+          hideSuggestions();
+        }
+      });
+
+      // Form submit với loading state
+      searchForm.addEventListener('submit', function (e) {
+        if (searchInput.value.trim().length === 0) {
+          e.preventDefault();
+          searchInput.focus();
+          return;
+        }
+
+        // Thêm loading state
+        this.classList.add('loading');
+
+        // Simulate API call - remove this in production
+        setTimeout(() => {
+          this.classList.remove('loading');
+        }, 2000);
+      });
+
+      // Khởi tạo trạng thái ban đầu
+      toggleClearButton();
+    }
+
+    // Responsive navigation toggle
+    function initResponsiveFeatures() {
+      // Ẩn/hiện text trên mobile
+      function toggleMobileText() {
+        const iconTexts = document.querySelectorAll('.icon-text');
+        const langSelector = document.querySelector('.language-selector');
+        const categoryDropdown = document.querySelector('.category-dropdown');
+
+        if (window.innerWidth <= 768) {
+          iconTexts.forEach(text => text.style.display = 'none');
+          if (langSelector) langSelector.style.display = 'none';
+        } else {
+          iconTexts.forEach(text => text.style.display = 'block');
+          if (langSelector) langSelector.style.display = 'block';
+        }
+
+        if (window.innerWidth <= 480) {
+          if (categoryDropdown) categoryDropdown.style.display = 'none';
+        } else {
+          if (categoryDropdown) categoryDropdown.style.display = 'block';
+        }
+      }
+
+      // Kiểm tra khi load trang
+      toggleMobileText();
+
+      // Kiểm tra khi resize
+      window.addEventListener('resize', toggleMobileText);
+    }
+
+    // Khởi tạo khi DOM đã load
+    document.addEventListener('DOMContentLoaded', function () {
+      initResponsiveFeatures();
+      initSearchFeatures();
+    });
+  </script>
 </body>
 
 </html>
