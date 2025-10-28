@@ -1,7 +1,7 @@
 /* Account Page Layout */
 .content-navigation {
   display: flex;
-  margin: 20px auto 15px;
+  margin: 5px auto 15px;
   max-width: 1200px;
   gap: 20px;
 }

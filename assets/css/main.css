@@ -1272,6 +1272,8 @@ img {
   font-weight: bolder;
   color: var(--white-color);
   align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 .ranking-manga-items-img {
   display: flex;
@@ -1583,17 +1585,13 @@ img {
 }
 .rank-soldout-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.25fr 2fr;
   gap: 30px;
   margin: 0 0 15px 0;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
 }
 .rank-soldout-list-left {
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1628,23 +1626,31 @@ img {
 .rank img {
   display: none;
 }
+.soldout-item-info {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  width: 100%;
+}
+
 .soldout-item-img {
-  width: 60px;
-  height: 80px;
+  width: 80px;
+  height: 100px;
   object-fit: cover;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
 }
-.soldout-item-info {
+
+.soldout-item-details {
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-width: 0;
 }
+
 .soldout-item-name {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   color: #333;
   line-height: 1.4;
   margin-bottom: 8px;
@@ -1655,9 +1661,89 @@ img {
 }
 
 .soldout-item-auth {
-  font-size: 13px;
+  font-size: 14px;
   color: #666;
   margin-bottom: 4px;
+}
+
+.soldout-item-publisher {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.soldout-item-pricing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.soldout-item-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #c92127;
+}
+
+.soldout-item-original-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.soldout-item-discount {
+  background: #ff6b35;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.soldout-item-description {
+}
+
+.soldout-item-description h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.soldout-item-description p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.soldout-item-description p:last-child {
+  margin-bottom: 0;
+}
+
+.soldout-item-author-info {
+  padding-top: 15px;
+  border-radius: 8px;
+}
+
+.soldout-item-author-info h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.soldout-item-author-info p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.soldout-item-author-info p:last-child {
+  margin-bottom: 0;
 }
 
 .soldout-item-point {
@@ -1668,14 +1754,12 @@ img {
 
 .rank-soldout-item-righ {
   background: white;
-  padding: 25px;
 }
 
 .rank-soldout-item-righ .soldout-item-info {
-  display: grid;
-  grid-template-columns: 200px 1fr;
+  display: flex;
   gap: 25px;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .rank-soldout-item-righ .soldout-item-img {
@@ -1684,10 +1768,17 @@ img {
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .rank-soldout-item-righ .soldout-item-img:hover {
   transform: scale(1.05);
+}
+
+.rank-soldout-item-righ .soldout-item-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .rank-soldout-item-righ .soldout-item-name {
@@ -1769,6 +1860,242 @@ img {
   flex-wrap: wrap;
   gap: 10px;
 }
+
+/* Responsive cho Rank Soldout List */
+@media (max-width: 1200px) {
+  .rank-soldout-list {
+    grid-template-columns: 1.1fr 1.8fr;
+    gap: 25px;
+    padding: 18px;
+  }
+
+  .rank-soldout-item-righ .soldout-item-img {
+    width: 160px;
+    height: 210px;
+  }
+
+  .rank-soldout-item-righ .soldout-item-name {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .rank-soldout-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .rank-soldout-item {
+    padding: 12px 15px;
+    gap: 12px;
+  }
+
+  .soldout-item-img {
+    width: 70px;
+    height: 90px;
+  }
+
+  .rank-soldout-item-righ {
+    padding: 20px;
+    order: -1; /* Đưa item lớn lên trên */
+  }
+
+  .rank-soldout-item-righ .soldout-item-info {
+    gap: 20px;
+  }
+
+  .rank-soldout-item-righ .soldout-item-img {
+    width: 140px;
+    height: 185px;
+  }
+
+  .rank-soldout-item-righ .soldout-item-name {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rank-soldout-list {
+    padding: 12px;
+    gap: 15px;
+  }
+
+  .rank-soldout-item {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .soldout-item-img {
+    width: 60px;
+    height: 80px;
+  }
+
+  .soldout-item-name {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .soldout-item-auth,
+  .soldout-item-publisher {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  .soldout-item-price {
+    font-size: 15px;
+  }
+
+  .soldout-item-original-price {
+    font-size: 12px;
+  }
+
+  .soldout-item-discount {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+
+  .rank-soldout-item-righ {
+    padding: 15px;
+  }
+
+  .rank-soldout-item-righ .soldout-item-info {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .rank-soldout-item-righ .soldout-item-img {
+    width: 120px;
+    height: 160px;
+    margin: 0 auto;
+  }
+
+  .rank-soldout-item-righ .soldout-item-name {
+    font-size: 16px;
+  }
+
+  .soldout-item-description,
+  .soldout-item-author-info {
+    padding: 12px;
+  }
+
+  .soldout-item-description h4,
+  .soldout-item-author-info h4 {
+    font-size: 13px;
+  }
+
+  .soldout-item-description p,
+  .soldout-item-author-info p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rank-soldout-list {
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .rank-soldout-item {
+    padding: 8px 10px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .rank {
+    font-size: 16px;
+    min-width: 30px;
+    order: 1;
+  }
+
+  .soldout-item-info {
+    width: calc(100% - 40px);
+    order: 2;
+  }
+
+  .soldout-item-img {
+    width: 50px;
+    height: 65px;
+  }
+
+  .soldout-item-details {
+    gap: 4px;
+  }
+
+  .soldout-item-name {
+    font-size: 13px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+
+  .soldout-item-auth,
+  .soldout-item-publisher {
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+
+  .soldout-item-pricing {
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .soldout-item-price {
+    font-size: 14px;
+  }
+
+  .soldout-item-original-price {
+    font-size: 11px;
+  }
+
+  .soldout-item-discount {
+    font-size: 9px;
+    padding: 1px 3px;
+  }
+
+  .rank-soldout-item-righ {
+    padding: 12px;
+  }
+
+  .rank-soldout-item-righ .soldout-item-img {
+    width: 100px;
+    height: 130px;
+  }
+
+  .rank-soldout-item-righ .soldout-item-name {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .rank-soldout-item-righ .soldout-item-auth,
+  .rank-soldout-item-righ .soldout-item-publisher {
+    font-size: 12px;
+  }
+
+  .rank-soldout-item-righ .soldout-item-price {
+    font-size: 16px;
+  }
+
+  .soldout-item-description,
+  .soldout-item-author-info {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .soldout-item-description h4,
+  .soldout-item-author-info h4 {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .soldout-item-description p,
+  .soldout-item-author-info p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+}
+
 /*Suggestion Books*/
 .suggestion-books {
   background: linear-gradient(
