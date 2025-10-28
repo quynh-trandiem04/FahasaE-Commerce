@@ -90,22 +90,149 @@
                         </section>
                         <nav>
                             <ul class="select-box">
-                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/account.svg" class="icon-item" alt="">Thông tin tài khoản</li>
-                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/orders.svg" class="icon-item" alt="">Đơn hàng của tôi</li>
-                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/vouchers.svg" class="icon-item" alt="">Ví voucher</li>
-                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/fpoint.svg" class="icon-item" alt="">Tài khoản F-Point / Freeship</li>
-                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/notification.svg" class="icon-item" alt="">Thông báo</li>
-                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/wishlist.svg" class="icon-item" alt="">Sản phẩm yêu thích</li>
-                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/seriesbook.svg" class="icon-item" alt="">Sách theo bộ</li>
-                                <li class="item-select"> <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/reviews.svg" class="icon-item" alt="">Nhận xét của tôi</li>
+                                <li class="item-select"> <img
+                                        src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/account.svg"
+                                        class="icon-item" alt="">Thông tin tài khoản</li>
+                                <li class="item-select"> <img
+                                        src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/orders.svg"
+                                        class="icon-item" alt="">Đơn hàng của tôi</li>
+                                <li class="item-select"> <img
+                                        src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/vouchers.svg"
+                                        class="icon-item" alt="">Ví voucher</li>
+                                <li class="item-select"> <img
+                                        src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/fpoint.svg"
+                                        class="icon-item" alt="">Tài khoản F-Point / Freeship</li>
+                                <li class="item-select"> <img
+                                        src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/notification.svg"
+                                        class="icon-item" alt="">Thông báo</li>
+                                <li class="item-select"> <img
+                                        src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/wishlist.svg"
+                                        class="icon-item" alt="">Sản phẩm yêu thích</li>
+                                <li class="item-select"> <img
+                                        src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/seriesbook.svg"
+                                        class="icon-item" alt="">Sách theo bộ</li>
+                                <li class="item-select"> <img
+                                        src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_user_info/reviews.svg"
+                                        class="icon-item" alt="">Nhận xét của tôi</li>
                             </ul>
                         </nav>
                     </div>
                     <main class="body-navigation">
-                        <div class="empty-cart">
-                            <img src="https://cdn1.fahasa.com/skin/frontend/ma_vanese/fahasa/images/checkout_cart/ico_emptycart.svg"
-                                class="img-empty-cart" alt="Giỏ hàng trống">
-                            <h2 class="title-empty-cart">Bạn chưa có đơn hàng nào.</h2>
+                        <!-- Dashboard Header with Owl -->
+                        <div class="dashboard-header">
+                            <img src="./assets/img/img-banner-account.png" class="img-header" alt="">
+                        </div>
+
+                        <!-- Stats Section -->
+                        <div class="stats-section">
+                            <div class="stats-header">
+                                <div class="stats-left">
+                                    <h3>Ưu đãi của bạn</h3>
+                                    <div class="stats-grid">
+                                        <div class="stat-item">
+                                            <span class="stat-label">F-Point hiện có</span>
+                                            <span class="stat-value highlight">0</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="stat-label">Freeship hiện có</span>
+                                            <span class="stat-value highlight">0 lần</span>
+                                        </div>
+                                    </div>
+                                    <div class="view-detail">
+                                        <span>Khám phá hàng thành viên. <a href="#" class="detail-link">Xem chi
+                                                tiết</a></span>
+                                    </div>
+                                </div>
+                                <div class="stats-right">
+                                    <h3>Thành tích năm 2025</h3>
+                                    <div class="stats-grid">
+                                        <div class="stat-item">
+                                            <span class="stat-label">Số đơn hàng</span>
+                                            <span class="stat-value highlight">0 đơn hàng</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="stat-label">Đã thanh toán</span>
+                                            <span class="stat-value highlight">0 đ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profile Form Section -->
+                        <div class="profile-section">
+                            <h3>Hồ sơ cá nhân</h3>
+                            <form class="profile-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="lastname">Họ*</label>
+                                        <input type="text" id="lastname" name="lastname" placeholder="Nhập họ">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firstname">Tên*</label>
+                                        <input type="text" id="firstname" name="firstname" placeholder="Nhập tên">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="phone">Số điện thoại</label>
+                                        <div class="phone-input">
+                                            <input type="tel" id="phone" name="phone" value="0942782355" readonly>
+                                            <button type="button" class="change-btn">Thay đổi</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <div class="email-input">
+                                            <input type="email" id="email" name="email" placeholder="Chưa có email">
+                                            <button type="button" class="add-btn">Thêm mới</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Giới tính*</label>
+                                        <div class="gender-options">
+                                            <label class="radio-label">
+                                                <input type="radio" name="gender" value="male">
+                                                <span class="radio-custom"></span>
+                                                Nam
+                                            </label>
+                                            <label class="radio-label selected">
+                                                <input type="radio" name="gender" value="female" checked>
+                                                <span class="radio-custom"></span>
+                                                Nữ
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Birthday*</label>
+                                        <div class="birthday-inputs">
+                                            <select name="day" class="birthday-select">
+                                                <option value="">09</option>
+                                                <!-- Add other days -->
+                                            </select>
+                                            <select name="month" class="birthday-select">
+                                                <option value="">06</option>
+                                                <!-- Add other months -->
+                                            </select>
+                                            <select name="year" class="birthday-select">
+                                                <option value="">2004</option>
+                                                <!-- Add other years -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="save-btn">Lưu thay đổi</button>
+                                </div>
+                            </form>
                         </div>
                     </main>
                 </div>
