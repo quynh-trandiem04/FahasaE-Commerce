@@ -27,12 +27,6 @@ Dự án giao diện website bán sách Fahasa được phát triển bằng HTM
 - **Layout ngang**: Form được bố trí theo chiều ngang hiện đại
 - **Dropdown sinh nhật**: Đầy đủ ngày, tháng, năm
 
-### 📂 Danh mục (category.html)
-
-- **Hiển thị sản phẩm**: Layout grid cho các sản phẩm
-- **Bộ lọc**: Lọc theo giá, thể loại, tác giả
-- **Phân trang**: Điều hướng trang dễ dàng
-
 ## 🚀 Cách sử dụng
 
 ### Yêu cầu hệ thống
