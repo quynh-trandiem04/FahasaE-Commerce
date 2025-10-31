@@ -91,14 +91,6 @@ Dự án giao diện website bán sách Fahasa được phát triển bằng HTM
   - Chỉnh sửa thông tin cá nhân
   - Form sinh nhật với dropdown
 
-#### 📂 Danh mục (category.html)
-
-- **URL**: `/category.html`
-- **Mô tả**: Trang danh mục sản phẩm
-- **Tính năng**:
-  - Hiển thị sản phẩm theo grid
-  - Bộ lọc và tìm kiếm
-
 ## 📁 Cấu trúc thư mục
 
 ```
@@ -106,14 +98,12 @@ Fahasa/
 ├── 📄 index.html          # Trang chủ
 ├── 📄 cart.html           # Trang giỏ hàng
 ├── 📄 account.html        # Trang tài khoản
-├── 📄 category.html       # Trang danh mục
 ├── 📄 README.md           # File hướng dẫn này
 └── 📁 assets/
     ├── 📁 css/
     │   ├──  main.css        # CSS chính cho trang chủ
     │   ├──  cart.css        # CSS cho trang giỏ hàng
     │   ├──  account.css     # CSS cho trang tài khoản
-    │   ├──  category.css    # CSS cho trang danh mục
     │   ├──  base.css        # CSS cơ bản, biến CSS
     │   └──  reset.css       # CSS reset browser
     ├── 📁 img/
